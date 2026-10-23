@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_blank" name="shell-type"/><title>SiteCheck AI - Authentication &amp; System Access</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary": "#002a78", "primary": "#b4c5ff", "on-secondary": "#3f008e", "inverse-surface": "#dfe2f1", "tertiary-fixed-dim": "#4edea3", "surface-container-low": "#171b26", "primary-container": "#2563eb", "on-secondary-fixed": "#25005a", "on-primary-fixed-variant": "#003ea8", "outline-variant": "#434655", "on-background": "#dfe2f1", "background": "#0f131d", "secondary-container": "#6001d1", "surface-bright": "#353944", "surface-container-high": "#262a35", "secondary-fixed-dim": "#d2bbff", "on-surface-variant": "#c3c6d7", "inverse-primary": "#0053db", "on-secondary-container": "#c9aeff", "on-secondary-fixed-variant": "#5a00c6", "on-primary-container": "#eeefff", "primary-fixed-dim": "#b4c5ff", "surface-variant": "#313540", "on-tertiary-fixed": "#002113", "tertiary": "#4edea3", "on-tertiary": "#003824", "surface-container-highest": "#313540", "surface-container": "#1c1f2a", "on-tertiary-container": "#bdffdb", "on-primary-fixed": "#00174b", "error-container": "#93000a", "tertiary-container": "#007d55", "secondary-fixed": "#eaddff", "on-tertiary-fixed-variant": "#005236", "on-surface": "#dfe2f1", "secondary": "#d2bbff", "tertiary-fixed": "#6ffbbe", "surface": "#0f131d", "primary-fixed": "#dbe1ff", "surface-tint": "#b4c5ff", "inverse-on-surface": "#2c303b", "on-error-container": "#ffdad6", "on-error": "#690005", "error": "#ffb4ab", "surface-dim": "#0f131d", "outline": "#8d90a0", "surface-container-lowest": "#0a0e18" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "gutter-mobile": "0.75rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-mobile": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter": "1.5rem" }, "fontFamily": { "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "headline-xl-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "headline-xl": ["48px", { "lineHeight": "56px", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md antialiased min-h-screen flex flex-col justify-center items-center selection:bg-primary-container selection:text-on-primary-container"><main class="w-full flex-1 flex flex-col justify-center items-center"><div class="flex flex-col w-full items-center justify-center py-6 px-4 sm:px-6 lg:px-8">
+<div class="relative w-full max-w-6xl mx-auto rounded-xl bg-surface-container/60 backdrop-blur-xl shadow-2xl overflow-hidden flex flex-col lg:flex-row min-h-[740px]">
+<!-- Ambient Radial Glows -->
+<div class="absolute -top-32 -left-32 w-96 h-96 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-96 h-96 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- LEFT PANEL: Technical Aesthetic & Live Product Preview -->
+<div class="relative lg:w-5/12 p-8 lg:p-12 flex flex-col justify-between overflow-hidden bg-surface-container-low/80">
+<!-- Faint Ambient SVG Grid -->
+<div class="absolute inset-0 opacity-15 pointer-events-none">
+<svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="36" id="audit-grid" patternunits="userSpaceOnUse" width="36">
+<path class="text-primary" d="M 36 0 L 0 0 0 36" fill="none" stroke="currentColor" stroke-width="0.75"></path>
+</pattern>
+</defs>
+<rect fill="url(#audit-grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- Top Header Context & Edge Node Telemetry -->
+<div class="relative z-10 flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-surface-container-high/90">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-wider">Cluster us-east-4 • Active</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">v3.4.12-rc</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest font-semibold block mb-1">Autonomous QA Infrastructure</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Zero-drift visual &amp; semantic test pipeline.</h2>
+</div>
+</div>
+<!-- Centerpiece: Floating Live AI Code Repair & Telemetry Card -->
+<div class="relative z-10 my-8">
+<!-- Floating Glass Diagnostic Mockup -->
+<div class="rounded-xl bg-surface-container-lowest/95 p-5 shadow-xl transition-all duration-300">
+<!-- Terminal / Studio Window Header -->
+<div class="flex items-center justify-between pb-3 mb-3 bg-surface-container-low/50 px-2 py-1.5 rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-error/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary/80"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant ml-2 font-mono">audit_runner.worker.ts</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[14px]">auto_fix_high</span> AI Self-Heal Active
+            </span>
+</div>
+<!-- Diff / Repair Visualization -->
+<div class="font-mono text-[11px] leading-5 space-y-1 mb-4 select-none">
+<div class="text-on-surface-variant/60 flex items-center justify-between">
+<span>// Target DOM: header.nav-desktop-v2</span>
+<span class="text-primary font-sans text-label-sm">Headless Chrome 124</span>
+</div>
+<div class="p-2 rounded bg-error-container/20 text-error flex items-start gap-2">
+<span class="font-bold">-</span>
+<code>overflow-x: scroll; /* Visual clip regression detected */</code>
+</div>
+<div class="p-2 rounded bg-tertiary-container/20 text-tertiary flex items-start gap-2">
+<span class="font-bold">+</span>
+<code>overflow-x: clip; contain: paint; /* Automated patch applied */</code>
+</div>
+</div>
+<!-- Micro Metric Ribbons -->
+<div class="grid grid-cols-3 gap-2 pt-2">
+<div class="p-2 rounded-lg bg-surface-container-high/60 flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">LCP Score</span>
+<span class="font-headline-sm text-headline-sm text-tertiary mt-0.5">0.84s</span>
+<span class="font-label-sm text-label-sm text-tertiary">▲ 38% faster</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high/60 flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">DOM Shift</span>
+<span class="font-headline-sm text-headline-sm text-on-surface mt-0.5">0.000</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Zero drift</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high/60 flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Healed Nodes</span>
+<span class="font-headline-sm text-headline-sm text-primary mt-0.5">14/14</span>
+<span class="font-label-sm text-label-sm text-primary">100% pass</span>
+</div>
+</div>
+</div>
+<!-- Floating Live Telemetry Badge -->
+<div class="absolute -bottom-4 right-4 bg-surface-container-high px-3 py-1.5 rounded-full shadow-lg flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-mono">edge_worker_fra1: 18ms latency</span>
+</div>
+</div>
+<!-- Bottom Trust Testimonial / Telemetry Summary -->
+<div class="relative z-10 pt-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">verified_user</span>
+</div>
+<div class="min-w-0">
+<p class="font-body-sm text-body-sm text-on-surface truncate">Trusted by 1,400+ Enterprise Engineering Teams</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Running 8.4M automated synthetic runs weekly</p>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Main Auth Form -->
+<div class="relative lg:w-7/12 p-8 lg:p-12 flex flex-col justify-between bg-surface-container-highest/20">
+<!-- Top Brand Header & Quick Autofill Badge -->
+<div>
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center shadow-lg shadow-primary-container/30">
+<span class="material-symbols-outlined text-white text-[24px]">troubleshoot</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">SiteCheck AI</span>
+<span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary font-label-sm text-label-sm font-semibold tracking-wider uppercase">QA Studio</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Sign in to orchestrate visual regressions and audit suites</p>
+</div>
+</div>
+<!-- Autofill Demo Access Button -->
+<button class="group self-start sm:self-auto inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm transition-all duration-200" id="autofill-btn" type="button">
+<span class="material-symbols-outlined text-primary text-[16px] group-hover:rotate-45 transition-transform duration-300">bolt</span>
+<span>Autofill Demo</span>
+</button>
+</div>
+<!-- Mode Toggle Tabs (Sign In vs Create Account) -->
+<div class="p-1 rounded-xl bg-surface-container-lowest flex items-center mb-6">
+<button class="flex-1 py-2 text-center rounded-lg font-label-md text-label-md transition-all duration-200 bg-primary-container text-white shadow-sm" id="tab-signin" type="button">
+            Sign In
+          </button>
+<button class="flex-1 py-2 text-center rounded-lg font-label-md text-label-md transition-all duration-200 text-on-surface-variant hover:text-on-surface" id="tab-signup" type="button">
+            Create Free Account
+          </button>
+</div>
+<!-- Quick 1-Click Social Sign-In Providers -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 mb-6">
+<!-- GitHub SSO -->
+<button class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-surface-container hover:bg-surface-bright text-on-surface text-label-md font-label-md transition-all duration-200 group" type="button">
+<svg class="w-4 h-4 text-on-surface group-hover:scale-110 transition-transform" fill="currentColor" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+<span>GitHub</span>
+</button>
+<!-- Google SSO -->
+<button class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-surface-container hover:bg-surface-bright text-on-surface text-label-md font-label-md transition-all duration-200 group" type="button">
+<svg class="w-4 h-4 group-hover:scale-110 transition-transform" viewbox="0 0 24 24">
+<path d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.3 9 5 12 5z" fill="#EA4335"></path>
+<path d="M23.5 12.3c0-.8-.1-1.7-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z" fill="#4285F4"></path>
+<path d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.8 0-1.3.2-2.1.4-2.8L1.9 6.3C.7 8.7 0 10.8 0 12c0 1.2.7 3.3 1.9 5.7l3.7-2.9z" fill="#FBBC05"></path>
+<path d="M12 23c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2.3-6.4-5.2L1.9 16C3.7 19.7 7.5 23 12 23z" fill="#34A853"></path>
+</svg>
+<span>Google</span>
+</button>
+<!-- SAML / Okta SSO -->
+<button class="flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg bg-surface-container hover:bg-surface-bright text-on-surface text-label-md font-label-md transition-all duration-200" type="button">
+<span class="material-symbols-outlined text-primary text-[18px]">key</span>
+<span>SSO / SAML</span>
+</button>
+</div>
+<!-- Subtle Text Divider -->
+<div class="relative flex items-center justify-center my-6">
+<div class="w-full h-px bg-surface-container-high"></div>
+<span class="absolute bg-surface-container-lowest px-3 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">or continue with work email</span>
+</div>
+<!-- Credentials Form -->
+<form class="space-y-4" id="auth-form" onsubmit="event.preventDefault();">
+<!-- Email Input -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1.5" for="work-email">Work Email</label>
+<div class="relative flex items-center">
+<div class="absolute left-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</div>
+<input class="w-full pl-10 pr-10 py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md placeholder:text-outline-variant focus:outline-none focus:bg-surface-container-high transition-colors" id="work-email" placeholder="name@company.com" required="" type="email" value="lead.auditor@enterprise.io"/>
+<div class="absolute right-3.5 flex items-center text-tertiary" id="email-valid-icon">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Password Input -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-label-md text-label-md text-on-surface" for="auth-password">Password</label>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">Forgot password?</a>
+</div>
+<div class="relative flex items-center">
+<div class="absolute left-3.5 flex items-center pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</div>
+<input class="w-full pl-10 pr-10 py-2.5 rounded-lg bg-surface-container text-on-surface font-body-md text-body-md placeholder:text-outline-variant focus:outline-none focus:bg-surface-container-high transition-colors font-mono" id="auth-password" placeholder="Enter your security token or password" required="" type="password" value="SiteCheck#Enterprise2025"/>
+<button class="absolute right-3.5 flex items-center text-on-surface-variant hover:text-on-surface focus:outline-none" id="toggle-password" type="button">
+<span class="material-symbols-outlined text-[18px]" id="eye-icon">visibility</span>
+</button>
+</div>
+<!-- Password Strength Bar Indicator -->
+<div class="mt-2 space-y-1">
+<div class="h-1 w-full bg-surface-container-high rounded-full overflow-hidden flex gap-1">
+<div class="h-full w-1/4 bg-tertiary rounded-full"></div>
+<div class="h-full w-1/4 bg-tertiary rounded-full"></div>
+<div class="h-full w-1/4 bg-tertiary rounded-full"></div>
+<div class="h-full w-1/4 bg-tertiary rounded-full"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm">
+<span class="text-on-surface-variant font-mono">Entropy: High (128-bit)</span>
+<span class="text-tertiary font-medium">Enterprise Compliant</span>
+</div>
+</div>
+</div>
+<!-- Session & Policy Controls -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input checked="" class="w-4 h-4 rounded bg-surface-container text-primary-container accent-primary-container focus:ring-0 cursor-pointer" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Remember this verified device (30 days)</span>
+</label>
+</div>
+<!-- Primary Launch Studio CTA -->
+<button class="w-full py-3 px-4 rounded-lg bg-primary-container hover:bg-blue-600 text-white font-headline-sm text-[16px] tracking-wide shadow-lg shadow-primary-container/25 hover:shadow-primary-container/40 flex items-center justify-center gap-2 transition-all duration-200 mt-2" id="submit-auth-btn" type="submit">
+<span id="btn-text">Launch SiteCheck Studio</span>
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200 group-hover:translate-x-1">arrow_forward</span>
+</button>
+</form>
+</div>
+<!-- Bottom Compliance & Security Assurance Strip -->
+<div class="pt-6 mt-6 bg-surface-container-high/30 -mx-8 -mb-8 lg:-mx-12 lg:-mb-12 p-4 px-8 lg:px-12 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-tertiary text-[16px]">format_image_left</span>
+<span>256-bit TLS Strict</span>
+<span class="text-outline-variant">•</span>
+<span>SOC-2 Type II Certified</span>
+<span class="text-outline-variant">•</span>
+<span>Zero Telemetry Retention</span>
+</div>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Compliance Specs →</a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Password Visibility Toggle Interaction
+  const passwordInput = document.getElementById('auth-password');
+  const toggleBtn = document.getElementById('toggle-password');
+  const eyeIcon = document.getElementById('eye-icon');
+
+  if (toggleBtn && passwordInput && eyeIcon) {
+    toggleBtn.addEventListener('click', () => {
+      const isPassword = passwordInput.getAttribute('type') === 'password';
+      passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+      eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+    });
+  }
+
+  // Quick Demo Autofill Feature
+  const autofillBtn = document.getElementById('autofill-btn');
+  const emailInput = document.getElementById('work-email');
+
+  if (autofillBtn && emailInput && passwordInput) {
+    autofillBtn.addEventListener('click', () => {
+      emailInput.value = 'demo.operator@sitecheck.ai';
+      passwordInput.value = 'SiteCheck-Autonomous2025!';
+      
+      autofillBtn.classList.add('bg-tertiary-container', 'text-on-tertiary-container');
+      const originalText = autofillBtn.innerHTML;
+      autofillBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">done</span><span>Credentials Loaded</span>';
+      
+      setTimeout(() => {
+        autofillBtn.innerHTML = originalText;
+        autofillBtn.classList.remove('bg-tertiary-container', 'text-on-tertiary-container');
+      }, 1500);
+    });
+  }
+
+  // Interactive Tab Toggle for Sign In vs Create Account
+  const tabSignIn = document.getElementById('tab-signin');
+  const tabSignUp = document.getElementById('tab-signup');
+  const submitBtnText = document.getElementById('btn-text');
+
+  if (tabSignIn && tabSignUp && submitBtnText) {
+    tabSignIn.addEventListener('click', () => {
+      tabSignIn.classList.add('bg-primary-container', 'text-white', 'shadow-sm');
+      tabSignIn.classList.remove('text-on-surface-variant');
+      tabSignUp.classList.remove('bg-primary-container', 'text-white', 'shadow-sm');
+      tabSignUp.classList.add('text-on-surface-variant');
+      submitBtnText.textContent = 'Launch SiteCheck Studio';
+    });
+
+    tabSignUp.addEventListener('click', () => {
+      tabSignUp.classList.add('bg-primary-container', 'text-white', 'shadow-sm');
+      tabSignUp.classList.remove('text-on-surface-variant');
+      tabSignIn.classList.remove('bg-primary-container', 'text-white', 'shadow-sm');
+      tabSignIn.classList.add('text-on-surface-variant');
+      submitBtnText.textContent = 'Create Team Studio Account';
+    });
+  }
+</script></main></body></html>

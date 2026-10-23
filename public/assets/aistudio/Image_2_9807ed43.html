@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#1c1f2a", "secondary": "#d2bbff", "on-secondary-container": "#c9aeff", "surface-container-lowest": "#0a0e18", "on-secondary-fixed-variant": "#5a00c6", "surface-tint": "#b4c5ff", "primary-fixed-dim": "#b4c5ff", "on-secondary-fixed": "#25005a", "tertiary-fixed-dim": "#4edea3", "on-tertiary-container": "#bdffdb", "on-tertiary-fixed": "#002113", "on-surface": "#dfe2f1", "surface-container-highest": "#313540", "on-primary-container": "#eeefff", "error-container": "#93000a", "on-tertiary": "#003824", "secondary-fixed": "#eaddff", "surface-container-low": "#171b26", "on-error": "#690005", "surface-bright": "#353944", "primary": "#b4c5ff", "surface-container-high": "#262a35", "primary-container": "#2563eb", "on-surface-variant": "#c3c6d7", "primary-fixed": "#dbe1ff", "on-tertiary-fixed-variant": "#005236", "error": "#ffb4ab", "inverse-primary": "#0053db", "outline": "#8d90a0", "surface-variant": "#313540", "tertiary-container": "#007d55", "inverse-surface": "#dfe2f1", "on-primary-fixed": "#00174b", "surface": "#0f131d", "on-error-container": "#ffdad6", "on-primary": "#002a78", "tertiary": "#4edea3", "on-secondary": "#3f008e", "outline-variant": "#434655", "tertiary-fixed": "#6ffbbe", "background": "#0f131d", "on-background": "#dfe2f1", "secondary-fixed-dim": "#d2bbff", "on-primary-fixed-variant": "#003ea8", "inverse-on-surface": "#2c303b", "secondary-container": "#6001d1", "surface-dim": "#0f131d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xl": "2.5rem", "gutter": "1.5rem", "margin": "2rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-md": "1rem" }, "fontFamily": { "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"] }, "fontSize": { "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "700"}], "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}], "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><div class="relative flex items-center justify-center"><img alt="SiteCheck AI Logo" class="h-8 w-auto object-contain drop-shadow-[0_0_12px_rgba(37,99,235,0.45)]" src="https://lh3.googleusercontent.com/aida/AEtjO1URNQJjQ6Xxpb_rr5B_n2GQcngpqZ_EI9lCPytW8iLKFSqW_XnmfKGTJN3JFRYs6rXXEay6pMP96Kj0I55rM1wLDjF4gerkiOSlJLZ-YSkVhhpOR7pdDkceJ4PuTqDGRcSVz3-Oyz56iRXgG3WoZSy3XO1S224OUwgR1B11E4DnI_x94u0VPT7slYHlLJOYVggN3aaI7SXV6xrGMwl5hIBSpM3EQMfeip9xWV6i2RBfICOriiAecQ_2bgM"/><span class="sr-only">Home</span></div><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface hidden xs:inline-block">SiteCheck</span><div class="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-tertiary-container/20 backdrop-blur-md"><span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-tertiary tracking-wide uppercase font-semibold">AI Engine Active</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors rounded-full"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-primary ring-2 ring-surface"></span></button><div class="relative w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7nJzUJcbKFqzI293intaRHOc7G24DX3Nv2j_3g_SNvxyd6jee2Z-dRcNYOJ5meVkqJRcEdQjFm3uKOAPrg4UGKLPSHX3P32KgePC5TLntAta5b1OkKLIaUzk5zzOKHlzS4p0VfhQk_c98y2hhunea0mF9ohDv6YTplOlAaG5TiCH_1GH1pCpvcMLRYHEqkFKpT6ZzIJyWRubjRR2DeHcEZnRXxIrbR278KC0Ep-v4TbpzP97Q9pBS"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow -->
+<div class="relative w-full px-margin-mobile pt-space-sm pb-space-lg flex flex-col gap-space-lg overflow-hidden">
+<!-- Atmospheric Radial Highlights -->
+<div class="absolute -top-12 -left-16 w-56 h-56 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-48 -right-16 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Top Status Badge Pill -->
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high/80 backdrop-blur-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_rgba(78,222,163,0.8)] animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wide">Powered by Claude 3.5 &amp; GPT-4o Vision</span>
+</div>
+<div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-container/30">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified_user</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">Sample Preview</span>
+</div>
+</div>
+<!-- Header & Pitch -->
+<div class="flex flex-col gap-space-xs">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">
+        Autonomous Web Testing &amp; QA in Seconds
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Enter any URL to test performance, broken links, mobile responsiveness, SEO, forms, and accessibility automatically.
+      </p>
+</div>
+<!-- Prominent URL Input Glass Card -->
+<div class="relative rounded-xl bg-surface-container/85 backdrop-blur-xl p-space-md flex flex-col gap-space-md shadow-xl">
+<!-- Input Wrapper -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant flex items-center justify-between" for="url-analyzer-input">
+<span>Target Production or Staging URL</span>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">bolt</span> Quick Preset
+          </span>
+</label>
+<div class="relative flex items-center">
+<div class="absolute left-3.5 flex items-center justify-center text-primary pointer-events-none">
+<span class="material-symbols-outlined text-[20px]">language</span>
+</div>
+<input class="w-full pl-11 pr-10 py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder-outline focus:outline-none focus:bg-surface-container-low transition-colors" id="url-analyzer-input" placeholder="https://yourcompany.com" type="url" value="https://stripe.com"/>
+<button aria-label="Clear input" class="absolute right-3 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" id="clear-url-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Test Scope Tags -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium uppercase tracking-wider">
+          Audit Scope &amp; Checkpoints
+        </span>
+<div class="flex flex-wrap gap-1.5" id="scope-chips">
+<button class="scope-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm font-semibold transition-all duration-200 bg-primary-container text-on-primary-container shadow-md" data-active="true" type="button">
+            ✨ All Audits (Full Scan)
+          </button>
+<button class="scope-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm font-medium transition-all duration-200 bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-active="false" type="button">
+            ⚡ Performance (CWV)
+          </button>
+<button class="scope-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm font-medium transition-all duration-200 bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-active="false" type="button">
+            🔗 Broken Links &amp; Buttons
+          </button>
+<button class="scope-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm font-medium transition-all duration-200 bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-active="false" type="button">
+            ♿ Accessibility (WCAG 2.1)
+          </button>
+<button class="scope-chip px-3 py-1.5 rounded-full font-label-sm text-label-sm font-medium transition-all duration-200 bg-surface-container-high text-on-surface-variant hover:text-on-surface" data-active="false" type="button">
+            📝 Contact Forms
+          </button>
+</div>
+</div>
+<!-- Live AI Agent Simulation Toggle -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-secondary-container/40 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">smart_toy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Live AI Agent Simulation</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Simulates human clicks, inputs &amp; viewport twists</span>
+</div>
+</div>
+<button aria-checked="true" class="relative w-12 h-6 rounded-full bg-primary-container p-0.5 transition-colors focus:outline-none" id="ai-toggle-btn" role="switch" type="button">
+<span class="block w-5 h-5 rounded-full bg-on-primary-container shadow-md transform translate-x-6 transition-transform"></span>
+</button>
+</div>
+<!-- Radiant Gradient Action Button -->
+<div class="flex flex-col gap-1.5 pt-1">
+<button class="relative overflow-hidden w-full py-3.5 px-4 rounded-xl bg-primary-container hover:bg-primary-container/90 text-on-primary-container font-headline-sm text-headline-sm flex flex-col items-center justify-center shadow-[0_0_24px_rgba(37,99,235,0.45)] active:scale-[0.99] transition-all" id="start-analyze-btn" type="button">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] animate-bounce">rocket_launch</span>
+<span>Analyze Website</span>
+</span>
+<span class="font-label-sm text-label-sm text-on-primary-container/85 tracking-wide mt-0.5">
+            Est. 18s • 42 Automated Checkpoints
+          </span>
+</button>
+</div>
+</div>
+<!-- Live Telemetry Simulation Indicator (Dynamic Feedback on Click) -->
+<div class="hidden rounded-lg bg-surface-container-high p-3 flex-col gap-2 shadow-md" id="telemetry-bar">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-md text-label-md text-on-surface" id="telemetry-status">Initializing headless chromium swarm...</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary" id="telemetry-timer">00:03</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-1/4 transition-all duration-300" id="telemetry-progress"></div>
+</div>
+</div>
+<!-- Recent Analyzed Sites -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">history</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Recent Scans</h2>
+</div>
+<button class="font-label-sm text-label-sm text-primary hover:underline" type="button">
+          View All History
+        </button>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Site 1: github.com -->
+<div class="rounded-xl bg-surface-container/70 p-3 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">G</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate font-semibold">github.com</span>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span>2 min ago</span>
+<span>•</span>
+<span>Core Web Vitals</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm text-tertiary">96/100</span>
+<span class="px-2 py-0.2 rounded-full font-label-sm text-label-sm bg-tertiary-container/30 text-tertiary font-medium">
+                Pass
+              </span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+</div>
+</div>
+<!-- Site 2: airbnb.com -->
+<div class="rounded-xl bg-surface-container/70 p-3 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">A</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate font-semibold">airbnb.com</span>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span>1 hour ago</span>
+<span>•</span>
+<span>Mobile UX Scan</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm text-primary">89/100</span>
+<span class="px-2 py-0.2 rounded-full font-label-sm text-label-sm bg-primary/20 text-primary font-medium">
+                Minor Issues
+              </span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+</div>
+</div>
+<!-- Site 3: shopify.store -->
+<div class="rounded-xl bg-surface-container/70 p-3 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="font-headline-sm text-headline-sm text-error font-bold">S</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate font-semibold">shopify.store</span>
+<div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface-variant">
+<span>3 hours ago</span>
+<span>•</span>
+<span>Checkout Flow</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<div class="flex flex-col items-end">
+<span class="font-headline-sm text-headline-sm text-error">74/100</span>
+<span class="px-2 py-0.2 rounded-full font-label-sm text-label-sm bg-error-container/40 text-error font-medium">
+                Critical Bug
+              </span>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Core Features Grid (2 columns on mobile) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Precision QA Capabilities</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 Active Engines</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Feature 1 -->
+<div class="rounded-xl bg-surface-container-low p-3.5 flex flex-col gap-2 shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<span class="font-headline-sm text-[15px] leading-tight text-on-surface">AI Website Agent</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+            Autonomous crawler discovers hidden form &amp; checkout bugs seamlessly.
+          </p>
+</div>
+<!-- Feature 2 -->
+<div class="rounded-xl bg-surface-container-low p-3.5 flex flex-col gap-2 shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-tertiary-container/25 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">speed</span>
+</div>
+<span class="font-headline-sm text-[15px] leading-tight text-on-surface">Core Web Vitals</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+            Real mobile network latency, LCP, INP &amp; CLS visual regression breakdown.
+          </p>
+</div>
+<!-- Feature 3 -->
+<div class="rounded-xl bg-surface-container-low p-3.5 flex flex-col gap-2 shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-secondary-container/30 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">link_off</span>
+</div>
+<span class="font-headline-sm text-[15px] leading-tight text-on-surface">Broken Links</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+            Automated click-path verification &amp; 404 dead-end resolution.
+          </p>
+</div>
+<!-- Feature 4 -->
+<div class="rounded-xl bg-surface-container-low p-3.5 flex flex-col gap-2 shadow-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[20px]">accessibility_new</span>
+</div>
+<span class="font-headline-sm text-[15px] leading-tight text-on-surface">WCAG Compliance</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+            Screen reader tree parsing &amp; 4.5:1 contrast ratio verification.
+          </p>
+</div>
+</div>
+</div>
+<!-- Visual Story / Live Diagnostic Snapshot -->
+<div class="rounded-xl bg-surface-container/80 p-space-md flex flex-col gap-3 shadow-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Live Edge Crawler Preview</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span> Global CDN Nodes
+        </span>
+</div>
+<!-- Rich Simulated Preview Image Placeholder -->
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Technical futuristic browser automation view showing automated headless Chrome testing an e-commerce website on mobile and desktop viewports, with holographic glowing data callouts, latency line charts, and pass badges in neon blue and mint cyan against deep slate navy background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTZf3UdKoZ5WVcniSnIpvm2oDNMHUoJ4SSdbulm_dRlY7PhZgup1zDNUrZWcfYz1tc_4M5bjIAUvIl_ypjuVSB92wh0fkzPQICIQRtAztvSB4p7CaOAHX7W6jTAPJZehLXFjSEDFXhbd2iHVYQw4Z5qyeSpxPdC7Mm2f62u9Gurl_BQOK-WNDR9mXmMLvuHhZDoBrAj2NFZ8ZkywX62gGUrSgPDxca3yDgPCanYmpA0FLL7_SLxayu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between p-2 rounded-lg bg-surface-container-high/90 backdrop-blur-md">
+<span class="font-body-sm text-body-sm text-on-surface font-mono">us-east.edge.sitecheck.ai:443</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">Latency 14ms</span>
+</div>
+</div>
+</div>
+<!-- Trust Banner -->
+<div class="rounded-xl bg-gradient-to-r from-surface-container to-surface-container-high p-space-md flex items-center gap-3.5 shadow-sm">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[26px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[15px] leading-tight text-on-surface font-semibold">
+          Analyzing 250,000+ pages weekly
+        </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-snug mt-0.5">
+          Trusted by high-growth startups and site reliability engineers worldwide.
+        </span>
+</div>
+</div>
+</div>
+<!-- Micro-interactions Script -->
+<script>
+    (function () {
+      const clearBtn = document.getElementById('clear-url-btn');
+      const urlInput = document.getElementById('url-analyzer-input');
+      const analyzeBtn = document.getElementById('start-analyze-btn');
+      const telemetryBar = document.getElementById('telemetry-bar');
+      const telemetryProgress = document.getElementById('telemetry-progress');
+      const telemetryStatus = document.getElementById('telemetry-status');
+      const telemetryTimer = document.getElementById('telemetry-timer');
+      const aiToggleBtn = document.getElementById('ai-toggle-btn');
+      const scopeChips = document.querySelectorAll('.scope-chip');
+
+      // Clear input logic
+      if (clearBtn && urlInput) {
+        clearBtn.addEventListener('click', () => {
+          urlInput.value = '';
+          urlInput.focus();
+        });
+      }
+
+      // Chip toggle logic
+      scopeChips.forEach((chip) => {
+        chip.addEventListener('click', () => {
+          const isActive = chip.getAttribute('data-active') === 'true';
+          if (isActive) {
+            chip.setAttribute('data-active', 'false');
+            chip.classList.remove('bg-primary-container', 'text-on-primary-container', 'shadow-md');
+            chip.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+          } else {
+            chip.setAttribute('data-active', 'true');
+            chip.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+            chip.classList.add('bg-primary-container', 'text-on-primary-container', 'shadow-md');
+          }
+        });
+      });
+
+      // AI Toggle logic
+      if (aiToggleBtn) {
+        aiToggleBtn.addEventListener('click', () => {
+          const isChecked = aiToggleBtn.getAttribute('aria-checked') === 'true';
+          const newState = !isChecked;
+          aiToggleBtn.setAttribute('aria-checked', String(newState));
+          const knob = aiToggleBtn.firstElementChild;
+          if (newState) {
+            aiToggleBtn.classList.remove('bg-surface-container-highest');
+            aiToggleBtn.classList.add('bg-primary-container');
+            knob.classList.remove('translate-x-0');
+            knob.classList.add('translate-x-6');
+          } else {
+            aiToggleBtn.classList.remove('bg-primary-container');
+            aiToggleBtn.classList.add('bg-surface-container-highest');
+            knob.classList.remove('translate-x-6');
+            knob.classList.add('translate-x-0');
+          }
+        });
+      }
+
+      // Analyze Button Trigger Live Simulation Bar
+      if (analyzeBtn && telemetryBar) {
+        let interval;
+        analyzeBtn.addEventListener('click', () => {
+          telemetryBar.classList.remove('hidden');
+          telemetryBar.classList.add('flex');
+          telemetryProgress.style.width = '15%';
+          telemetryStatus.textContent = 'Launching headless browser container...';
+          telemetryTimer.textContent = '00:01';
+
+          let step = 1;
+          clearInterval(interval);
+          interval = setInterval(() => {
+            step++;
+            if (step === 2) {
+              telemetryProgress.style.width = '45%';
+              telemetryStatus.textContent = 'Simulating DOM interaction & form fuzzing...';
+              telemetryTimer.textContent = '00:06';
+            } else if (step === 3) {
+              telemetryProgress.style.width = '82%';
+              telemetryStatus.textContent = 'Evaluating WCAG 2.1 contrast & network payload...';
+              telemetryTimer.textContent = '00:12';
+            } else if (step === 4) {
+              telemetryProgress.style.width = '100%';
+              telemetryStatus.textContent = 'Audit complete! 0 critical regressions.';
+              telemetryTimer.textContent = '00:18';
+              clearInterval(interval);
+            }
+          }, 1200);
+        });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.4)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] transition-colors duration-200 text-primary font-bold" data-path="home" href="#"><span class="material-symbols-outlined text-[22px]">home</span><span class="font-label-sm text-label-sm">Home</span></a><a class="relative -top-2 flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface group" data-path="audit" href="#"><div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center shadow-[0_0_18px_rgba(37,99,235,0.6)] group-hover:shadow-[0_0_24px_rgba(37,99,235,0.8)] transition-all duration-300"><span class="material-symbols-outlined text-[24px] text-white">radar</span></div><span class="font-label-sm text-label-sm text-primary font-medium mt-1">Audit</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">bar_chart</span><span class="font-label-sm text-label-sm">Dashboard</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="ai-agent" href="#"><span class="material-symbols-outlined text-[22px]">smart_toy</span><span class="font-label-sm text-label-sm">AI Agent</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors duration-200" data-path="reports" href="#"><span class="material-symbols-outlined text-[22px]">description</span><span class="font-label-sm text-label-sm">Reports</span></a></div></nav></body></html>

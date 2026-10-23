@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SiteCheck AI - Autonomous Web Quality Assurance &amp; Diagnostic Suite</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary": "#002a78", "primary": "#b4c5ff", "on-secondary": "#3f008e", "inverse-surface": "#dfe2f1", "tertiary-fixed-dim": "#4edea3", "surface-container-low": "#171b26", "primary-container": "#2563eb", "on-secondary-fixed": "#25005a", "on-primary-fixed-variant": "#003ea8", "outline-variant": "#434655", "on-background": "#dfe2f1", "background": "#0f131d", "secondary-container": "#6001d1", "surface-bright": "#353944", "surface-container-high": "#262a35", "secondary-fixed-dim": "#d2bbff", "on-surface-variant": "#c3c6d7", "inverse-primary": "#0053db", "on-secondary-container": "#c9aeff", "on-secondary-fixed-variant": "#5a00c6", "on-primary-container": "#eeefff", "primary-fixed-dim": "#b4c5ff", "surface-variant": "#313540", "on-tertiary-fixed": "#002113", "tertiary": "#4edea3", "on-tertiary": "#003824", "surface-container-highest": "#313540", "surface-container": "#1c1f2a", "on-tertiary-container": "#bdffdb", "on-primary-fixed": "#00174b", "error-container": "#93000a", "tertiary-container": "#007d55", "secondary-fixed": "#eaddff", "on-tertiary-fixed-variant": "#005236", "on-surface": "#dfe2f1", "secondary": "#d2bbff", "tertiary-fixed": "#6ffbbe", "surface": "#0f131d", "primary-fixed": "#dbe1ff", "surface-tint": "#b4c5ff", "inverse-on-surface": "#2c303b", "on-error-container": "#ffdad6", "on-error": "#690005", "error": "#ffb4ab", "surface-dim": "#0f131d", "outline": "#8d90a0", "surface-container-lowest": "#0a0e18" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "gutter-mobile": "0.75rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-mobile": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter": "1.5rem" }, "fontFamily": { "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "headline-xl-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "headline-xl": ["48px", { "lineHeight": "56px", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_16px_rgba(0,0,0,0.5)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-3 group transition-transform active:scale-95" data-path="dashboard" href="#"><div class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary-container via-secondary-container to-surface-container-high shadow-[0_0_20px_rgba(37,99,235,0.4)]"><span class="material-symbols-outlined text-primary text-[22px]">shield_with_heart</span><div class="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-primary to-secondary opacity-30 blur-sm group-hover:opacity-75 transition duration-500"></div></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">SiteCheck</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-extrabold">AI</span></div><span class="font-label-sm text-[10px] text-outline uppercase tracking-widest font-semibold">Automated QA Suite</span></div></a><div class="hidden xl:flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-surface-container-low shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant font-mono tracking-tight">AI ENGINE v3.4 ACTIVE <span class="text-outline mx-1">•</span> Edge Node US-East</span></div></div><nav class="hidden lg:flex items-center gap-1 bg-surface-container-low/70 p-1 rounded-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_rgba(37,99,235,0.35)]"><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analyzer" href="#">Analyzer</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#">Dashboard</a><a aria-current="page" class="px-3.5 py-2 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_rgba(37,99,235,0.35)]" data-path="testing-reports" href="#">Testing Reports</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ai-assistant" href="#">AI Assistant</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="pricing" href="#">Pricing</a></nav><div class="flex items-center gap-space-sm"><button class="hidden md:flex items-center gap-3 px-3.5 py-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]" type="button"><span class="material-symbols-outlined text-[18px] text-outline">search</span><span class="font-body-sm text-body-sm text-outline">Search audits, URLs, tests...</span><kbd class="hidden lg:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-surface-container-high text-[10px] font-mono text-outline font-semibold shadow-sm">⌘K</kbd></button><button class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-inverse-primary hover:text-on-primary-container shadow-[0_0_16px_rgba(37,99,235,0.35)] transition-all active:scale-95" type="button"><span class="material-symbols-outlined text-[18px]">play_arrow</span><span class="hidden sm:inline">New Audit</span></button><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest animate-pulse"></span></button><div class="flex items-center gap-2.5 pl-2 ml-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-primary-container/40"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden 2xl:flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-label-md text-label-md text-on-surface leading-none">Alex Vance</span><span class="px-1.5 py-0.5 rounded-full bg-secondary-container/60 text-secondary text-[10px] font-semibold leading-none">Pro Team</span></div><span class="font-label-sm text-[11px] text-outline leading-tight">alex@sitecheck.ai</span></div></div></div></div></header><main class="w-full pt-20 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle Background Glow Element -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 right-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-20 right-10 w-80 h-80 bg-secondary-container/15 rounded-full blur-3xl pointer-events-none"></div>
+<div class="w-full px-gutter py-space-lg flex flex-col gap-space-lg">
+<!-- Top Action Bar & Title Block -->
+<section class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-1.5 max-w-2xl">
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-tertiary font-label-sm text-label-sm uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span> Continuous Monitoring Archive
+            </span>
+<span class="text-outline font-label-sm text-label-sm">• Node telemetry synched 14s ago</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">Testing Reports &amp; Audit Logs</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Complete historical archive of all automated crawler runs, regression suites, and AI agent diagnostic reports across production &amp; preview targets.</p>
+</div>
+<!-- Global Quick Actions -->
+<div class="flex flex-wrap items-center gap-2.5">
+<button class="group flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high shadow-sm transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary group-hover:rotate-12 transition-transform">picture_as_pdf</span>
+<span class="font-label-md text-label-md">Export Multi-Site PDF</span>
+</button>
+<button class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high shadow-sm transition-all active:scale-95" id="compare-btn" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">compare_arrows</span>
+<span class="font-label-md text-label-md">Compare 2 Reports</span>
+<span class="px-1.5 py-0.2 rounded-md bg-surface-container-highest text-outline font-mono text-[10px]" id="compare-count">0/2</span>
+</button>
+<button class="flex items-center gap-2 px-3.5 py-2.5 rounded-xl bg-surface-container text-on-surface hover:bg-surface-container-high shadow-sm transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary">webhook</span>
+<span class="font-label-md text-label-md">Webhooks</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:bg-inverse-primary transition-all active:scale-95" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_add_on</span>
+<span>Schedule Automated Audit</span>
+</button>
+</div>
+</section>
+<!-- Executive Audit Summary Metrics (4 Cards Bento) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Metric 1: Total Scans -->
+<div class="group relative p-5 rounded-2xl bg-surface-container-low/80 backdrop-blur-md shadow-md flex flex-col justify-between overflow-hidden hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Total Scans Executed</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">radar</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-2.5">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">1,428</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span> +12%
+            </span>
+</div>
+<div class="mt-3 flex items-center justify-between text-outline font-body-sm text-body-sm">
+<span>vs. 1,275 last month</span>
+<span class="text-on-surface-variant font-mono">99.8% uptime</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-container to-transparent opacity-80"></div>
+</div>
+<!-- Metric 2: Vulnerabilities -->
+<div class="group relative p-5 rounded-2xl bg-surface-container-low/80 backdrop-blur-md shadow-md flex flex-col justify-between overflow-hidden hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Critical Vulnerabilities</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">bug_report</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-2.5">
+<span class="font-headline-lg text-headline-lg font-bold text-error">3 Unresolved</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm flex items-center gap-0.5 font-semibold">
+<span class="material-symbols-outlined text-[14px]">arrow_downward</span> -5
+            </span>
+</div>
+<div class="mt-3 flex items-center justify-between text-outline font-body-sm text-body-sm">
+<span>Down from 8 logged</span>
+<span class="text-error font-semibold">1 Blocking Release</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-error to-transparent opacity-70"></div>
+</div>
+<!-- Metric 3: Average Platform Health -->
+<div class="group relative p-5 rounded-2xl bg-surface-container-low/80 backdrop-blur-md shadow-md flex flex-col justify-between overflow-hidden hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Avg. Platform Health</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">health_and_safety</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-2.5">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">93.4<span class="text-headline-sm font-normal text-outline"> / 100</span></span>
+<span class="px-2 py-0.5 rounded-full bg-primary/20 text-primary font-label-sm text-label-sm font-semibold">Grade A</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-outline font-body-sm text-body-sm">
+<span>Aggregated across 28 sites</span>
+<span class="text-tertiary font-mono">+1.8 pts</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-tertiary to-transparent opacity-80"></div>
+</div>
+<!-- Metric 4: Automated PRs Merged -->
+<div class="group relative p-5 rounded-2xl bg-surface-container-low/80 backdrop-blur-md shadow-md flex flex-col justify-between overflow-hidden hover:bg-surface-container transition-all">
+<div class="flex items-center justify-between text-outline">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-semibold">Autonomous Fixes</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+</div>
+</div>
+<div class="mt-3 flex items-baseline gap-2.5">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary">47 Fixes</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/40 text-secondary font-label-sm text-label-sm font-semibold">PRs Merged</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-outline font-body-sm text-body-sm">
+<span>Avg time-to-patch: 18m</span>
+<span class="text-on-surface-variant font-mono">100% CI pass</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary-container to-transparent opacity-80"></div>
+</div>
+</section>
+<!-- Search, Filter & View Mode Controls -->
+<section class="p-3.5 rounded-2xl bg-surface-container-low/90 backdrop-blur-md shadow-md flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-sm">
+<!-- Search Input -->
+<div class="relative flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-[18px] text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-surface-container text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container shadow-inner transition-all" id="report-search" placeholder="Search by URL, test ID, commit hash, or environment..." type="text"/>
+</div>
+<!-- Filter Dropdowns -->
+<div class="flex flex-wrap items-center gap-2">
+<!-- Date Filter -->
+<div class="relative">
+<select class="appearance-none pl-3.5 pr-8 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer shadow-sm">
+<option>Last 7 Days (28 Runs)</option>
+<option selected="">Last 30 Days (114 Runs)</option>
+<option>Last 90 Days</option>
+<option>Custom Date Range...</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline">expand_more</span>
+</div>
+<!-- Score Filter -->
+<div class="relative">
+<select class="appearance-none pl-3.5 pr-8 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer shadow-sm">
+<option selected="">All Health Scores</option>
+<option>Grade A (&gt;90)</option>
+<option>Grade B (75 - 89)</option>
+<option>Grade C &amp; Failing (&lt;75)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline">expand_more</span>
+</div>
+<!-- Severity Filter -->
+<div class="relative">
+<select class="appearance-none pl-3.5 pr-8 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer shadow-sm">
+<option selected="">All Severities</option>
+<option>Critical Regressions Only</option>
+<option>Warnings &amp; A11y Flags</option>
+<option>Clean Runs (0 Issues)</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline">expand_more</span>
+</div>
+<!-- Environment Filter -->
+<div class="relative">
+<select class="appearance-none pl-3.5 pr-8 py-2.5 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md focus:outline-none focus:ring-2 focus:ring-primary-container cursor-pointer shadow-sm">
+<option selected="">All Environments</option>
+<option>Production (Live)</option>
+<option>Staging</option>
+<option>CI/CD Pull Request</option>
+</select>
+<span class="material-symbols-outlined pointer-events-none absolute right-2.5 top-1/2 -translate-y-1/2 text-[16px] text-outline">expand_more</span>
+</div>
+<!-- View Mode Toggle -->
+<div class="flex items-center p-1 rounded-xl bg-surface-container">
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-high text-primary shadow-sm flex items-center gap-1 font-label-md text-label-md transition-colors" id="toggle-table" title="Tabular Inspection" type="button">
+<span class="material-symbols-outlined text-[16px]">table_rows</span>
+<span class="hidden sm:inline">Table</span>
+</button>
+<button class="px-2.5 py-1.5 rounded-lg text-outline hover:text-on-surface flex items-center gap-1 font-label-md text-label-md transition-colors" id="toggle-grid" title="Visual Cards" type="button">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+<span class="hidden sm:inline">Grid</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Main Layout: Table View (Left) & Inspector Preview Drawer (Right) -->
+<div class="grid grid-cols-1 2xl:grid-cols-12 gap-space-lg items-start">
+<!-- Table & Grid Container (Spans 8 cols on 2xl) -->
+<div class="2xl:col-span-8 flex flex-col gap-space-md">
+<!-- Tabular View Section -->
+<div class="w-full rounded-2xl bg-surface-container-low/90 backdrop-blur-md shadow-md overflow-hidden flex flex-col" id="table-view">
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-sm text-body-sm border-collapse">
+<thead>
+<tr class="bg-surface-container-high/60 text-outline uppercase font-label-sm text-[11px] tracking-wider">
+<th class="py-3.5 px-4 w-10">
+<input class="rounded bg-surface-container border-0 accent-primary-container cursor-pointer w-4 h-4" id="select-all" type="checkbox"/>
+</th>
+<th class="py-3.5 px-4">Domain &amp; Target</th>
+<th class="py-3.5 px-4">Date &amp; Execution</th>
+<th class="py-3.5 px-4">Viewport</th>
+<th class="py-3.5 px-4">Score &amp; Trend</th>
+<th class="py-3.5 px-4">Key Findings</th>
+<th class="py-3.5 px-4">Status</th>
+<th class="py-3.5 px-4 text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high/40">
+<!-- Row 1: stripe.com/checkout -->
+<tr class="report-row cursor-pointer transition-colors hover:bg-surface-container/60 bg-surface-container/20" data-report-id="rep-stripe">
+<td class="py-3.5 px-4" onclick="event.stopPropagation()">
+<input class="report-select rounded bg-surface-container border-0 accent-primary-container cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[14px] text-on-surface font-semibold hover:underline">stripe.com/checkout</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-primary font-mono text-[10px]">prod</span>
+</div>
+<span class="font-mono text-[11px] text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">commit</span> main @ 9f41a8c
+                          </span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Oct 24, 14:32:08</span>
+<span class="text-outline font-mono text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">timer</span> 42.4s (38 pages)
+                        </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-mono text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-outline">devices</span>
+<span>375×812 + 1440</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-[16px] font-bold text-tertiary">94</span>
+<span class="font-label-sm text-[9px] text-outline">/100</span>
+</div>
+<!-- Mini Sparkline SVG -->
+<svg class="w-14 h-6 text-tertiary" fill="none" viewbox="0 0 56 24">
+<path d="M2 18L14 14L26 19L38 8L54 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[11px] font-medium">3 broken links</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant text-[11px] font-medium">1 tap warning</span>
+</div>
+<span class="text-outline font-label-sm text-[10px]">PDF ready (2.4 MB)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1 w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Passed
+                      </span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="View Full Diagnostic" type="button">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Download PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Send to Slack / Jira" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: app.linear.b2b -->
+<tr class="report-row cursor-pointer transition-colors hover:bg-surface-container/60" data-report-id="rep-linear">
+<td class="py-3.5 px-4" onclick="event.stopPropagation()">
+<input class="report-select rounded bg-surface-container border-0 accent-primary-container cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-secondary-container/20 flex items-center justify-center text-secondary font-bold">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[14px] text-on-surface font-semibold hover:underline">app.linear.b2b</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-secondary font-mono text-[10px]">staging</span>
+</div>
+<span class="font-mono text-[11px] text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">call_split</span> staging-pr-812
+                          </span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Oct 24, 11:15:30</span>
+<span class="text-outline font-mono text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">timer</span> 19.1s (12 pages)
+                        </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-mono text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-outline">desktop_mac</span>
+<span>1920×1080 Full</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-[16px] font-bold text-tertiary">98</span>
+<span class="font-label-sm text-[9px] text-outline">/100</span>
+</div>
+<svg class="w-14 h-6 text-tertiary" fill="none" viewbox="0 0 56 24">
+<path d="M2 12L14 10L26 6L38 4L54 2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<span class="text-tertiary font-label-md text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Clean pass, 0 regressions
+                        </span>
+<span class="text-outline font-label-sm text-[10px]">Audit hash #8812</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1 w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Flawless
+                      </span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="View Full Diagnostic" type="button">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Download PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Send to Slack / Jira" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: shopify-demo-store.io (CRITICAL FAILED) -->
+<tr class="report-row cursor-pointer transition-colors hover:bg-surface-container/60 bg-error-container/10" data-report-id="rep-shopify">
+<td class="py-3.5 px-4" onclick="event.stopPropagation()">
+<input class="report-select rounded bg-surface-container border-0 accent-primary-container cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-error-container/30 flex items-center justify-center text-error font-bold">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[14px] text-on-surface font-semibold hover:underline">shopify-demo-store.io</span>
+<span class="px-1.5 py-0.2 rounded bg-error-container/40 text-error font-mono text-[10px]">v2.4-rel</span>
+</div>
+<span class="font-mono text-[11px] text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">tag</span> release/v2.4.0-rc2
+                          </span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Oct 23, 21:04:19</span>
+<span class="text-outline font-mono text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">timer</span> 1m 18s (84 pages)
+                        </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-mono text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-outline">phone_iphone</span>
+<span>iPhone 15 Pro</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-[16px] font-bold text-error">78</span>
+<span class="font-label-sm text-[9px] text-outline">/100</span>
+</div>
+<svg class="w-14 h-6 text-error" fill="none" viewbox="0 0 56 24">
+<path d="M2 4L14 6L26 8L38 18L54 22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<span class="text-error font-medium text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">error</span> 2 critical form errors
+                        </span>
+<span class="text-on-surface-variant font-mono text-[11px]">LCP 4.2s (Exceeded SLA)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-error-container/40 text-error font-label-sm text-label-sm font-semibold flex items-center gap-1 w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Failed
+                      </span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="View Full Diagnostic" type="button">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Download PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Send to Slack / Jira" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: vercel-nextjs-docs -->
+<tr class="report-row cursor-pointer transition-colors hover:bg-surface-container/60" data-report-id="rep-vercel">
+<td class="py-3.5 px-4" onclick="event.stopPropagation()">
+<input class="report-select rounded bg-surface-container border-0 accent-primary-container cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface font-bold">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[14px] text-on-surface font-semibold hover:underline">vercel-nextjs-docs</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-on-surface-variant font-mono text-[10px]">production</span>
+</div>
+<span class="font-mono text-[11px] text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">commit</span> master @ b04d88e
+                          </span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Oct 23, 18:40:02</span>
+<span class="text-outline font-mono text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">timer</span> 28.3s (52 pages)
+                        </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-mono text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-outline">devices</span>
+<span>Responsive (5x)</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-[16px] font-bold text-tertiary">96</span>
+<span class="font-label-sm text-[9px] text-outline">/100</span>
+</div>
+<svg class="w-14 h-6 text-tertiary" fill="none" viewbox="0 0 56 24">
+<path d="M2 14L14 12L26 12L38 6L54 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<span class="text-on-surface-variant font-medium text-[11px]">1 missing image alt tag</span>
+<span class="text-outline font-label-sm text-[10px]">SEO &amp; A11y pass: 99%</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex items-center gap-1 w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Needs Attn
+                      </span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="View Full Diagnostic" type="button">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Download PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Send to Slack / Jira" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: supabase-dashboard-preview -->
+<tr class="report-row cursor-pointer transition-colors hover:bg-surface-container/60" data-report-id="rep-supabase">
+<td class="py-3.5 px-4" onclick="event.stopPropagation()">
+<input class="report-select rounded bg-surface-container border-0 accent-primary-container cursor-pointer w-4 h-4" type="checkbox"/>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-xl bg-tertiary-container/30 flex items-center justify-center text-tertiary font-bold">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[14px] text-on-surface font-semibold hover:underline">supabase.internal/console</span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container-high text-tertiary font-mono text-[10px]">ci-branch</span>
+</div>
+<span class="font-mono text-[11px] text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">commit</span> feat/auth-v3 @ cc8191a
+                          </span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Oct 23, 09:12:44</span>
+<span class="text-outline font-mono text-[11px] flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">timer</span> 14.8s (8 pages)
+                        </span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-mono text-[11px]">
+<span class="material-symbols-outlined text-[16px] text-outline">desktop_windows</span>
+<span>1440×900 Native</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-center">
+<span class="font-headline-sm text-[16px] font-bold text-tertiary">92</span>
+<span class="font-label-sm text-[9px] text-outline">/100</span>
+</div>
+<svg class="w-14 h-6 text-tertiary" fill="none" viewbox="0 0 56 24">
+<path d="M2 18L14 16L26 10L38 10L54 8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1">
+<span class="text-on-surface-variant font-medium text-[11px]">Zero visual shifts (CLS 0.00)</span>
+<span class="text-outline font-label-sm text-[10px]">Autofix applied to header</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="px-2.5 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold flex items-center gap-1 w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span> Passed
+                      </span>
+</td>
+<td class="py-3.5 px-4 text-right" onclick="event.stopPropagation()">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="View Full Diagnostic" type="button">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Download PDF" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Send to Slack / Jira" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Bulk Status Footer -->
+<div class="px-5 py-3.5 bg-surface-container flex flex-col sm:flex-row items-center justify-between gap-3 text-outline font-body-sm text-body-sm">
+<div class="flex items-center gap-2">
+<span>Showing <strong class="text-on-surface font-semibold">1 - 5</strong> of 1,428 total audits</span>
+<span class="text-surface-container-highest">•</span>
+<span class="text-tertiary font-mono">Archive synched with Git provider</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface disabled:opacity-40 disabled:cursor-not-allowed text-xs font-semibold" disabled="" type="button">
+                  Previous
+                </button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary-container text-xs font-bold shadow-sm" type="button">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface text-xs font-semibold" type="button">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface text-xs font-semibold" type="button">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface text-xs font-semibold" type="button">286</button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface-variant hover:text-on-surface text-xs font-semibold" type="button">
+                  Next
+                </button>
+</div>
+</div>
+</div>
+<!-- Grid Cards View Section (Initially Hidden via JS toggle) -->
+<div class="hidden grid grid-cols-1 md:grid-cols-2 gap-space-md" id="grid-view">
+<!-- Grid Card 1: Stripe -->
+<div class="p-5 rounded-2xl bg-surface-container-low shadow-md hover:bg-surface-container transition-all flex flex-col justify-between gap-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">payments</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] text-on-surface font-semibold">stripe.com/checkout</h3>
+<p class="font-mono text-[11px] text-outline">main @ 9f41a8c • Oct 24, 14:32</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold">Passed</span>
+</div>
+<div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-surface-container-lowest text-center">
+<div>
+<div class="font-headline-sm text-[18px] font-bold text-tertiary">94</div>
+<div class="font-label-sm text-[10px] text-outline">Health Score</div>
+</div>
+<div>
+<div class="font-headline-sm text-[18px] font-bold text-on-surface">42s</div>
+<div class="font-label-sm text-[10px] text-outline">Scan Time</div>
+</div>
+<div>
+<div class="font-headline-sm text-[18px] font-bold text-on-surface">38</div>
+<div class="font-label-sm text-[10px] text-outline">URLs Tested</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-body-sm text-[11px] text-on-surface-variant">3 broken links • 1 tap flag</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-primary hover:bg-primary-container hover:text-on-primary-container text-xs font-semibold transition-all" type="button">Inspect Report</button>
+</div>
+</div>
+<!-- Grid Card 2: Linear -->
+<div class="p-5 rounded-2xl bg-surface-container-low shadow-md hover:bg-surface-container transition-all flex flex-col justify-between gap-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">task_alt</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] text-on-surface font-semibold">app.linear.b2b</h3>
+<p class="font-mono text-[11px] text-outline">staging-pr-812 • Oct 24, 11:15</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary/15 text-tertiary font-label-sm text-label-sm font-semibold">Flawless</span>
+</div>
+<div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-surface-container-lowest text-center">
+<div>
+<div class="font-headline-sm text-[18px] font-bold text-tertiary">98</div>
+<div class="font-label-sm text-[10px] text-outline">Health Score</div>
+</div>
+<div>
+<div class="font-headline-sm text-[18px] font-bold text-on-surface">19s</div>
+<div class="font-label-sm text-[10px] text-outline">Scan Time</div>
+</div>
+<div>
+<div class="font-headline-sm text-[18px] font-bold text-on-surface">12</div>
+<div class="font-label-sm text-[10px] text-outline">URLs Tested</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-body-sm text-[11px] text-tertiary">0 regressions detected</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-primary hover:bg-primary-container hover:text-on-primary-container text-xs font-semibold transition-all" type="button">Inspect Report</button>
+</div>
+</div>
+<!-- Grid Card 3: Shopify -->
+<div class="p-5 rounded-2xl bg-surface-container-low shadow-md hover:bg-surface-container transition-all flex flex-col justify-between gap-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-error-container/30 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] text-on-surface font-semibold">shopify-demo-store.io</h3>
+<p class="font-mono text-[11px] text-outline">release/v2.4.0 • Oct 23, 21:04</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-error-container/40 text-error font-label-sm text-label-sm font-semibold">Failed</span>
+</div>
+<div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-surface-container-lowest text-center">
+<div>
+<div class="font-headline-sm text-[18px] font-bold text-error">78</div>
+<div class="font-label-sm text-[10px] text-outline">Health Score</div>
+</div>
+<div>
+<div class="font-headline-sm text-[18px] font-bold text-on-surface">1m 18s</div>
+<div class="font-label-sm text-[10px] text-outline">Scan Time</div>
+</div>
+<div>
+<div class="font-headline-sm text-[18px] font-bold text-on-surface">84</div>
+<div class="font-label-sm text-[10px] text-outline">URLs Tested</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-body-sm text-[11px] text-error">2 critical form submit crashes</span>
+<button class="px-3 py-1.5 rounded-lg bg-error-container text-on-error-container hover:bg-error hover:text-on-error text-xs font-semibold transition-all" type="button">Resolve Issues</button>
+</div>
+</div>
+<!-- Grid Card 4: Vercel Docs -->
+<div class="p-5 rounded-2xl bg-surface-container-low shadow-md hover:bg-surface-container transition-all flex flex-col justify-between gap-4">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] text-on-surface font-semibold">vercel-nextjs-docs</h3>
+<p class="font-mono text-[11px] text-outline">master @ b04d88e • Oct 23, 18:40</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold">Needs Attn</span>
+</div>
+<div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-surface-container-lowest text-center">
+<div>
+<div class="font-headline-sm text-[18px] font-bold text-tertiary">96</div>
+<div class="font-label-sm text-[10px] text-outline">Health Score</div>
+</div>
+<div>
+<div class="font-headline-sm text-[18px] font-bold text-on-surface">28s</div>
+<div class="font-label-sm text-[10px] text-outline">Scan Time</div>
+</div>
+<div>
+<div class="font-headline-sm text-[18px] font-bold text-on-surface">52</div>
+<div class="font-label-sm text-[10px] text-outline">URLs Tested</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-2">
+<span class="font-body-sm text-[11px] text-on-surface-variant">1 missing alt tag</span>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-primary hover:bg-primary-container hover:text-on-primary-container text-xs font-semibold transition-all" type="button">Inspect Report</button>
+</div>
+</div>
+</div>
+<!-- Bottom Audit Telemetry Banner -->
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-3">
+<div class="w-3 h-3 rounded-full bg-tertiary animate-ping"></div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Edge Agent Scheduled Run: In 14 mins</span>
+<span class="font-body-sm text-body-sm text-outline">Auto-auditing 6 staging endpoints for pull requests #820-#824</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-high text-on-surface hover:bg-surface-bright font-label-md text-label-md transition-colors" type="button">
+                Configure Frequency
+              </button>
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container font-label-md text-label-md transition-colors" type="button">
+                Run Immediacy Check
+              </button>
+</div>
+</div>
+</div>
+<!-- Selected Report Quick-Drawer / Inspector Preview Pane (Spans 4 cols on 2xl) -->
+<aside class="2xl:col-span-4 w-full flex flex-col gap-space-md sticky top-24">
+<div class="rounded-2xl bg-surface-container-low/95 backdrop-blur-xl p-5 shadow-xl flex flex-col gap-space-md overflow-hidden relative">
+<!-- Top Subtle Light Accent -->
+<div class="absolute top-0 right-0 left-0 h-1 bg-gradient-to-r from-primary via-secondary to-tertiary"></div>
+<!-- Drawer Header -->
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Active Inspector Target</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold mt-1" id="inspector-domain">stripe.com/checkout</h2>
+<span class="font-mono text-[11px] text-outline" id="inspector-subtext">Audit ID: #REP-94021-STRIPE • Target: US-East-1 Edge</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-high transition-colors" title="Pop-out View" type="button">
+<span class="material-symbols-outlined text-[18px]">open_in_full</span>
+</button>
+</div>
+</div>
+<!-- Overall Health Score Gauge & Quality Distribution -->
+<div class="p-4 rounded-xl bg-surface-container flex items-center justify-between gap-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Overall QA Score</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-xl text-[38px] leading-tight font-extrabold text-tertiary" id="inspector-score">94</span>
+<span class="text-on-surface-variant font-label-md text-label-md font-medium">/ 100</span>
+</div>
+<span class="text-tertiary font-label-sm text-[11px] font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span> Production Ready
+                </span>
+</div>
+<!-- Compact Radar / Polar Visualization SVG -->
+<div class="relative w-28 h-28 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<!-- Outer track -->
+<circle class="text-surface-container-highest" cx="50" cy="50" fill="none" r="42" stroke="currentColor" stroke-width="8"></circle>
+<!-- Pass Progress (94%) -->
+<circle class="text-tertiary" cx="50" cy="50" fill="none" r="42" stroke="currentColor" stroke-dasharray="264" stroke-dashoffset="15" stroke-linecap="round" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="material-symbols-outlined text-primary text-[22px]">speed</span>
+<span class="font-label-sm text-[10px] text-outline font-mono">RADAR</span>
+</div>
+</div>
+</div>
+<!-- Core Web Vitals Triple Gauge -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span> Core Web Vitals (P75 Real User Data)
+                </span>
+<span class="font-label-sm text-[10px] text-tertiary font-mono">ALL PASS</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<!-- Metric: LCP -->
+<div class="p-2.5 rounded-xl bg-surface-container flex flex-col items-center text-center">
+<span class="font-label-sm text-[10px] text-outline uppercase font-semibold">LCP</span>
+<span class="font-headline-sm text-[16px] font-bold text-tertiary mt-0.5">1.1s</span>
+<span class="font-label-sm text-[9px] text-outline">Target &lt; 2.5s</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full mt-1.5 overflow-hidden">
+<div class="w-4/5 h-full bg-tertiary rounded-full"></div>
+</div>
+</div>
+<!-- Metric: CLS -->
+<div class="p-2.5 rounded-xl bg-surface-container flex flex-col items-center text-center">
+<span class="font-label-sm text-[10px] text-outline uppercase font-semibold">CLS</span>
+<span class="font-headline-sm text-[16px] font-bold text-tertiary mt-0.5">0.01</span>
+<span class="font-label-sm text-[9px] text-outline">Target &lt; 0.1</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full mt-1.5 overflow-hidden">
+<div class="w-11/12 h-full bg-tertiary rounded-full"></div>
+</div>
+</div>
+<!-- Metric: INP -->
+<div class="p-2.5 rounded-xl bg-surface-container flex flex-col items-center text-center">
+<span class="font-label-sm text-[10px] text-outline uppercase font-semibold">INP</span>
+<span class="font-headline-sm text-[16px] font-bold text-tertiary mt-0.5">98ms</span>
+<span class="font-label-sm text-[9px] text-outline">Target &lt; 200ms</span>
+<div class="w-full h-1 bg-surface-container-highest rounded-full mt-1.5 overflow-hidden">
+<div class="w-3/4 h-full bg-tertiary rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Diagnostic Radar Vectors -->
+<div class="p-3.5 rounded-xl bg-surface-container flex flex-col gap-2.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Audited Vectors Breakdown</span>
+<div class="flex flex-col gap-2 text-xs">
+<!-- Row 1 -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="text-on-surface">Visual Regression (DOM Tree Diff)</span>
+<span class="text-tertiary font-mono font-semibold">99.4% Match</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-[99%] h-full bg-tertiary rounded-full"></div>
+</div>
+</div>
+<!-- Row 2 -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="text-on-surface">WCAG 2.2 AA Accessibility</span>
+<span class="text-on-surface-variant font-mono font-semibold">92.0%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-[92%] h-full bg-primary-container rounded-full"></div>
+</div>
+</div>
+<!-- Row 3 -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="text-on-surface">Security &amp; CSP Headers</span>
+<span class="text-tertiary font-mono font-semibold">100% Secure</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-full h-full bg-tertiary rounded-full"></div>
+</div>
+</div>
+<!-- Row 4 -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="text-on-surface">Mobile Touch &amp; Tap Target Area</span>
+<span class="text-on-surface-variant font-mono font-semibold">88.5% (1 Warning)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="w-[88%] h-full bg-secondary rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Detected Issues Fast-Action Card -->
+<div class="p-3.5 rounded-xl bg-surface-container-highest/60 flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-error">warning</span> Critical Diagnostics
+                </span>
+<span class="px-1.5 py-0.2 rounded bg-surface-container text-outline font-mono text-[10px]">2 items</span>
+</div>
+<ul class="flex flex-col gap-2 text-xs">
+<li class="flex items-start gap-2 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-outline text-[16px] mt-0.5">link_off</span>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Dead link on footer navigation</span>
+<span class="text-outline font-mono text-[10px]">/docs/v3/legacy-webhook-migrator (HTTP 404)</span>
+</div>
+</li>
+<li class="flex items-start gap-2 p-2 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-outline text-[16px] mt-0.5">touch_app</span>
+<div class="flex flex-col">
+<span class="text-on-surface font-medium">Payment modal CTA tap target small</span>
+<span class="text-outline font-mono text-[10px]">#submit-button is 34×32px (min 48×48px req)</span>
+</div>
+</li>
+</ul>
+</div>
+<!-- One-Click AI Fix Automation Action -->
+<div class="flex flex-col gap-2 pt-2">
+<button class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-primary-container via-secondary-container to-primary-container bg-size-200 text-on-primary-container font-label-md text-label-md font-semibold flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:brightness-110 active:scale-98 transition-all" id="ai-fix-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">magic_button</span>
+<span>Generate Autonomous AI Fix Script</span>
+</button>
+<div class="flex items-center justify-between text-outline font-label-sm text-[11px] px-1">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-tertiary">check</span> Prepares GitHub PR Branch
+                </span>
+<span class="font-mono text-outline">sitecheck-bot/v3.4</span>
+</div>
+</div>
+</div>
+<!-- Audit Execution Environment Metadata Widget -->
+<div class="rounded-2xl bg-surface-container-low/70 backdrop-blur-md p-4 shadow-sm flex flex-col gap-2 text-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-semibold">Execution Worker Footprint</span>
+<div class="grid grid-cols-2 gap-2 text-on-surface-variant font-mono text-[11px]">
+<div class="p-2 rounded-lg bg-surface-container">
+<span class="text-outline block text-[9px] uppercase">Engine</span>
+<span>Chromium 122 Headless</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container">
+<span class="text-outline block text-[9px] uppercase">Emulation</span>
+<span>Touch Enabled + GPS mock</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container">
+<span class="text-outline block text-[9px] uppercase">Edge Cluster</span>
+<span>AWS iad-edge-04b</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container">
+<span class="text-outline block text-[9px] uppercase">Proxy Mode</span>
+<span>Direct Residential Pool</span>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // 1. View Switcher Logic (Table vs Grid)
+    const btnTable = document.getElementById('toggle-table');
+    const btnGrid = document.getElementById('toggle-grid');
+    const viewTable = document.getElementById('table-view');
+    const viewGrid = document.getElementById('grid-view');
+
+    if (btnTable && btnGrid && viewTable && viewGrid) {
+      btnTable.addEventListener('click', () => {
+        btnTable.className = "px-2.5 py-1.5 rounded-lg bg-surface-container-high text-primary shadow-sm flex items-center gap-1 font-label-md text-label-md transition-colors";
+        btnGrid.className = "px-2.5 py-1.5 rounded-lg text-outline hover:text-on-surface flex items-center gap-1 font-label-md text-label-md transition-colors";
+        viewTable.classList.remove('hidden');
+        viewGrid.classList.add('hidden');
+      });
+
+      btnGrid.addEventListener('click', () => {
+        btnGrid.className = "px-2.5 py-1.5 rounded-lg bg-surface-container-high text-primary shadow-sm flex items-center gap-1 font-label-md text-label-md transition-colors";
+        btnTable.className = "px-2.5 py-1.5 rounded-lg text-outline hover:text-on-surface flex items-center gap-1 font-label-md text-label-md transition-colors";
+        viewGrid.classList.remove('hidden');
+        viewTable.classList.add('hidden');
+      });
+    }
+
+    // 2. Select All & Compare Counter Behavior
+    const selectAll = document.getElementById('select-all');
+    const rowCheckboxes = document.querySelectorAll('.report-select');
+    const compareCount = document.getElementById('compare-count');
+
+    function updateCompareCounter() {
+      let selected = 0;
+      rowCheckboxes.forEach(cb => {
+        if (cb.checked) selected++;
+      });
+      if (compareCount) {
+        compareCount.textContent = selected + '/2';
+        if (selected === 2) {
+          compareCount.classList.remove('bg-surface-container-highest', 'text-outline');
+          compareCount.classList.add('bg-secondary-container', 'text-secondary', 'font-bold');
+        } else {
+          compareCount.classList.add('bg-surface-container-highest', 'text-outline');
+          compareCount.classList.remove('bg-secondary-container', 'text-secondary', 'font-bold');
+        }
+      }
+    }
+
+    if (selectAll) {
+      selectAll.addEventListener('change', (e) => {
+        rowCheckboxes.forEach(cb => {
+          cb.checked = e.target.checked;
+        });
+        updateCompareCounter();
+      });
+    }
+
+    rowCheckboxes.forEach(cb => {
+      cb.addEventListener('change', () => {
+        updateCompareCounter();
+      });
+    });
+
+    // 3. Row Selection & Inspector Drawer Dynamic Preview Update
+    const rows = document.querySelectorAll('.report-row');
+    const inspectorDomain = document.getElementById('inspector-domain');
+    const inspectorSub = document.getElementById('inspector-subtext');
+    const inspectorScore = document.getElementById('inspector-score');
+
+    const mockData = {
+      'rep-stripe': {
+        domain: 'stripe.com/checkout',
+        sub: 'Audit ID: #REP-94021-STRIPE • Target: US-East-1 Edge',
+        score: '94'
+      },
+      'rep-linear': {
+        domain: 'app.linear.b2b',
+        sub: 'Audit ID: #REP-71044-LINEAR • Target: EU-Central Edge',
+        score: '98'
+      },
+      'rep-shopify': {
+        domain: 'shopify-demo-store.io',
+        sub: 'Audit ID: #REP-11094-SHOPIFY • Target: AP-East Edge',
+        score: '78'
+      },
+      'rep-vercel': {
+        domain: 'vercel-nextjs-docs',
+        sub: 'Audit ID: #REP-55420-VERCEL • Target: US-West Edge',
+        score: '96'
+      },
+      'rep-supabase': {
+        domain: 'supabase.internal/console',
+        sub: 'Audit ID: #REP-32981-SUPA • Target: CI Pipeline Node 8',
+        score: '92'
+      }
+    };
+
+    rows.forEach(row => {
+      row.addEventListener('click', () => {
+        // Highlight active row
+        rows.forEach(r => r.classList.remove('bg-surface-container/40', 'bg-surface-container/20'));
+        row.classList.add('bg-surface-container/40');
+
+        const repId = row.getAttribute('data-report-id');
+        if (repId && mockData[repId]) {
+          if (inspectorDomain) inspectorDomain.textContent = mockData[repId].domain;
+          if (inspectorSub) inspectorSub.textContent = mockData[repId].sub;
+          if (inspectorScore) {
+            inspectorScore.textContent = mockData[repId].score;
+            if (parseInt(mockData[repId].score) < 80) {
+              inspectorScore.className = "font-headline-xl text-[38px] leading-tight font-extrabold text-error";
+            } else {
+              inspectorScore.className = "font-headline-xl text-[38px] leading-tight font-extrabold text-tertiary";
+            }
+          }
+        }
+      });
+    });
+
+    // 4. Autonomous AI Fix Button Micro-interaction
+    const aiFixBtn = document.getElementById('ai-fix-btn');
+    if (aiFixBtn) {
+      aiFixBtn.addEventListener('click', () => {
+        const originalContent = aiFixBtn.innerHTML;
+        aiFixBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[18px] animate-spin">sync</span>
+          <span>Synthesizing AST Code Patch...</span>
+        `;
+        aiFixBtn.disabled = true;
+
+        setTimeout(() => {
+          aiFixBtn.innerHTML = `
+            <span class="material-symbols-outlined text-[18px] text-tertiary">task_alt</span>
+            <span>PR #834 Opened in GitHub!</span>
+          `;
+          setTimeout(() => {
+            aiFixBtn.innerHTML = originalContent;
+            aiFixBtn.disabled = false;
+          }, 3500);
+        }, 1600);
+      });
+    }
+
+    // 5. Interactive Domain Search Filter
+    const searchInput = document.getElementById('report-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        const val = e.target.value.toLowerCase();
+        rows.forEach(row => {
+          const text = row.innerText.toLowerCase();
+          if (text.includes(val)) {
+            row.style.display = '';
+          } else {
+            row.style.display = 'none';
+          }
+        });
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_16px_rgba(0,0,0,0.4)] mt-space-xl"><div class="w-full px-gutter py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-3"><div class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-low text-primary"><span class="material-symbols-outlined text-[18px]">shield</span></div><div class="flex flex-col"><span class="font-headline-sm text-[14px] text-on-surface font-semibold">SiteCheck AI Platform</span><span class="font-body-sm text-body-sm text-outline">Autonomous visual regression, edge diagnostic runner &amp; accessibility auditor.</span></div></div><div class="flex items-center gap-space-lg text-outline font-label-md text-label-md"><a class="hover:text-on-surface transition-colors" href="#">Architecture</a><a class="hover:text-on-surface transition-colors" href="#">Security &amp; SOC2</a><a class="hover:text-on-surface transition-colors" href="#">API Docs</a><a class="hover:text-on-surface transition-colors" href="#">Status</a></div><div class="font-body-sm text-body-sm text-outline">© 2025 SiteCheck AI Labs Inc. All rights reserved.</div></div></footer></body></html>

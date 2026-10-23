@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#1c1f2a", "secondary": "#d2bbff", "on-secondary-container": "#c9aeff", "surface-container-lowest": "#0a0e18", "on-secondary-fixed-variant": "#5a00c6", "surface-tint": "#b4c5ff", "primary-fixed-dim": "#b4c5ff", "on-secondary-fixed": "#25005a", "tertiary-fixed-dim": "#4edea3", "on-tertiary-container": "#bdffdb", "on-tertiary-fixed": "#002113", "on-surface": "#dfe2f1", "surface-container-highest": "#313540", "on-primary-container": "#eeefff", "error-container": "#93000a", "on-tertiary": "#003824", "secondary-fixed": "#eaddff", "surface-container-low": "#171b26", "on-error": "#690005", "surface-bright": "#353944", "primary": "#b4c5ff", "surface-container-high": "#262a35", "primary-container": "#2563eb", "on-surface-variant": "#c3c6d7", "primary-fixed": "#dbe1ff", "on-tertiary-fixed-variant": "#005236", "error": "#ffb4ab", "inverse-primary": "#0053db", "outline": "#8d90a0", "surface-variant": "#313540", "tertiary-container": "#007d55", "inverse-surface": "#dfe2f1", "on-primary-fixed": "#00174b", "surface": "#0f131d", "on-error-container": "#ffdad6", "on-primary": "#002a78", "tertiary": "#4edea3", "on-secondary": "#3f008e", "outline-variant": "#434655", "tertiary-fixed": "#6ffbbe", "background": "#0f131d", "on-background": "#dfe2f1", "secondary-fixed-dim": "#d2bbff", "on-primary-fixed-variant": "#003ea8", "inverse-on-surface": "#2c303b", "secondary-container": "#6001d1", "surface-dim": "#0f131d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-sm": "0.5rem", "space-xl": "2.5rem", "gutter": "1.5rem", "margin": "2rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "margin-mobile": "1rem", "space-md": "1rem" }, "fontFamily": { "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"] }, "fontSize": { "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "700"}], "label-sm": ["11px", {"lineHeight": "14px", "fontWeight": "500"}], "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}], "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}], "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}], "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}], "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go Back" class="w-11 h-11 -ml-space-xs flex items-center justify-center text-on-surface hover:text-primary transition-colors rounded-full" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="SiteCheck AI Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1URNQJjQ6Xxpb_rr5B_n2GQcngpqZ_EI9lCPytW8iLKFSqW_XnmfKGTJN3JFRYs6rXXEay6pMP96Kj0I55rM1wLDjF4gerkiOSlJLZ-YSkVhhpOR7pdDkceJ4PuTqDGRcSVz3-Oyz56iRXgG3WoZSy3XO1S224OUwgR1B11E4DnI_x94u0VPT7slYHlLJOYVggN3aaI7SXV6xrGMwl5hIBSpM3EQMfeip9xWV6i2RBfICOriiAecQ_2bgM"/><h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight truncate max-w-[180px]">Audit Details</h1></div><div class="flex items-center gap-space-xs"><div class="relative w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-outline-variant/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7nJzUJcbKFqzI293intaRHOc7G24DX3Nv2j_3g_SNvxyd6jee2Z-dRcNYOJ5meVkqJRcEdQjFm3uKOAPrg4UGKLPSHX3P32KgePC5TLntAta5b1OkKLIaUzk5zzOKHlzS4p0VfhQk_c98y2hhunea0mF9ohDv6YTplOlAaG5TiCH_1GH1pCpvcMLRYHEqkFKpT6ZzIJyWRubjRR2DeHcEZnRXxIrbR278KC0Ep-v4TbpzP97Q9pBS"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full px-space-md pb-space-xl gap-space-md">
+<!-- Target Audit URL & Device Matrix Pill -->
+<section class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Audit Completed</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">• 2m ago</span>
+</div>
+<div class="flex items-center gap-space-xs mt-0.5">
+<span class="material-symbols-outlined text-[18px] text-primary">lock</span>
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">stripe.com/checkout</span>
+</div>
+</div>
+<div class="flex items-center justify-center bg-tertiary-container/30 px-2.5 py-1 rounded-full shrink-0">
+<span class="font-label-md text-label-md text-on-tertiary-container font-semibold">Score: 94/100</span>
+</div>
+</div>
+<!-- Device Emulator Spec Ribbon -->
+<div class="flex items-center gap-space-xs py-1.5 px-3 rounded-lg bg-surface-container font-body-sm text-body-sm text-on-surface-variant flex-wrap">
+<span class="material-symbols-outlined text-[16px] text-primary">stay_current_portrait</span>
+<span class="font-label-md text-label-md text-on-surface">iPhone 15 Pro</span>
+<span>•</span>
+<span>393×852</span>
+<span>•</span>
+<span class="flex items-center gap-0.5 text-on-surface">
+<span class="material-symbols-outlined text-[14px]">signal_cellular_alt</span>
+        4G Throttling
+      </span>
+<span>•</span>
+<span class="text-tertiary">Edge: IAD1 (Virginia)</span>
+</div>
+</section>
+<!-- Horizontal Scrollable Category Filter Tabs -->
+<section class="w-full -mx-space-md px-space-md overflow-x-auto no-scrollbar py-0.5">
+<div class="flex items-center gap-space-xs min-w-max" id="category-tabs">
+<button class="px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm flex items-center gap-1.5 transition-all">
+<span>All Checks</span>
+<span class="bg-primary/20 px-1.5 py-0.5 rounded-full text-[10px]">46</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>Broken Links</span>
+<span class="text-[10px] text-error font-semibold">3</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Buttons &amp; Forms</span>
+<span class="text-[10px]">12</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all">
+<span>Speed &amp; Vitals</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5">
+<span>Accessibility</span>
+<span class="text-[10px]">18</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all">
+<span>Security &amp; SSL</span>
+</button>
+</div>
+</section>
+<!-- Section 1: Broken Links & 404 Sentinel -->
+<section class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[20px]">link_off</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Broken Links Sentinel</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Real-time recursive crawl</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-semibold">
+        3 Dead 404s
+      </span>
+</div>
+<!-- Scanned Gauge Strip -->
+<div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface">328</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">Total Links<br/>Evaluated</span>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex flex-col items-end">
+<span class="font-label-md text-label-md text-tertiary">325 Healthy (99.1%)</span>
+<span class="font-label-sm text-label-sm text-error">3 Unresolved 404s</span>
+</div>
+</div>
+</div>
+<!-- Issue Cards -->
+<div class="flex flex-col gap-2">
+<!-- Accordion Card 1 (Active/Expanded) -->
+<div class="rounded-lg bg-surface-container p-space-sm flex flex-col gap-2">
+<div class="flex items-start justify-between gap-2 cursor-pointer" onclick="this.parentElement.querySelector('.link-meta').classList.toggle('hidden')">
+<div class="flex items-start gap-2 min-w-0">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-error-container text-on-error-container mt-0.5 shrink-0">404</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">/docs/deprecated-v1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Found in: Footer Sitemap column 3</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1">
+<span class="material-symbols-outlined text-[18px]">keyboard_arrow_down</span>
+</button>
+</div>
+<div class="link-meta bg-surface-container-lowest/60 rounded p-2.5 flex flex-col gap-1.5 text-body-sm font-body-sm">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Canonical Anchor Text:</span>
+<span class="text-on-surface font-mono text-[11px] bg-surface-container px-1 rounded">"Legacy API Reference"</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Server Response:</span>
+<span class="text-error font-medium">HTTP 404 (Not Found in 118ms)</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span>Suggested Redirect:</span>
+<span class="text-primary font-mono text-[11px] truncate max-w-[180px]">/docs/api-versioning</span>
+</div>
+</div>
+</div>
+<!-- Quick Issue 2 -->
+<div class="rounded-lg bg-surface-container p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-error-container text-on-error-container shrink-0">404</span>
+<span class="font-label-md text-label-md text-on-surface truncate">/legal/subprocessors-2022</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant shrink-0">Terms footer</span>
+</div>
+</div>
+</section>
+<!-- Section 2: Interactive Button & Form Tester -->
+<section class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Button &amp; Form Tester</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Synthetic automated input fuzzing</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-container/30 text-on-tertiary-container font-label-md text-label-md font-semibold">
+        All Operational
+      </span>
+</div>
+<!-- Active Form Simulation Diagnostic -->
+<div class="rounded-lg bg-surface-container p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Modal: "Talk to Checkout Specialist"</span>
+<span class="text-tertiary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 200 OK (420ms)
+        </span>
+</div>
+<!-- Step-by-step synthetic simulation telemetry -->
+<div class="flex flex-col gap-1.5 mt-1 bg-surface-container-lowest/60 rounded p-2.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">done_all</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Field <span class="text-on-surface font-mono">#work-email</span>: Synthetic input test <span class="text-primary font-mono">'audit-bot@qa.stripe'</span> accepted</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">done_all</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Email validation regex passed <span class="font-mono text-[10px] text-secondary">RFC-5322</span></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">done_all</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">CSRF token handshake validated; no payload drop</span>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-1">
+<span>Tested 12 Buttons &amp; 3 Field Groups</span>
+<button class="text-primary hover:underline font-label-md text-label-md flex items-center gap-0.5">
+<span>Replay Video</span>
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Section 3: Mobile Responsive Design Inspector -->
+<section class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">responsive_layout</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Mobile Layout Inspector</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Viewport boundary &amp; touch audit</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-md text-label-md font-semibold">
+        1 Warning
+      </span>
+</div>
+<!-- Quick Responsive Metrics Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Horizontal Overflow</span>
+<span class="font-label-md text-label-md text-tertiary font-semibold mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check</span> Clean (0px bleed)
+        </span>
+</div>
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Touch Target &lt; 44px</span>
+<span class="font-label-md text-label-md text-error font-semibold mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">warning</span> 2 Buttons Deficient
+        </span>
+</div>
+</div>
+<!-- Screenshot Visual Box Preview -->
+<div class="rounded-lg bg-surface-container p-space-sm flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">Viewport Snapshot Highlight</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Target size: 36x28px</span>
+</div>
+<!-- Preview Image Canvas with Red Highlight Box -->
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover opacity-80" data-alt="Modern high-resolution mobile smartphone view of a dark themed tech company website checkout page showing buttons and form fields with clean typography and deep navy backgrounds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClvNOX8zTF0b2gCOx1nvgpnrpYtMQroK2yjAGrMBHeDgiE10ab68ZGAvJDsHzuRWHChYVJKhTOp1CHv240qpr7UzytRBHJlJsvWZ80uZz8mJ2cMtssYyoIQ-NrWmGfHUrQxZ8sKB8IPMYaOOjvgzrVgJH2vVIHHX6AH8uPdHF3YIQxwULV492-6xe8iTbKNJNmc74YOykZafWgNexzPbB6eKKCIxx5dJHKrF2kwjqrlmGkFMdJDlyE"/>
+<!-- Diagnostic overlay box simulating inspection frame -->
+<div class="absolute inset-0 bg-surface-container-lowest/30 backdrop-blur-[1px]"></div>
+<div class="absolute top-12 left-10 w-28 h-9 border-2 border-dashed border-error rounded bg-error/20 flex items-center justify-center shadow-lg animate-pulse">
+<span class="bg-error text-on-error px-1 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider">36px tap target</span>
+</div>
+<div class="absolute bottom-2 left-2 bg-surface-container-high/90 px-2 py-1 rounded text-body-sm font-body-sm text-on-surface flex items-center gap-1 backdrop-blur-md">
+<span class="material-symbols-outlined text-[14px] text-error">crop_free</span>
+<span>Hero 'Apply Promo' Button</span>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+        WCAG 2.5.5 suggests minimum interactive dimension of 44×44 CSS pixels.
+      </span>
+</div>
+</section>
+<!-- Section 4: WCAG 2.1 Accessibility Matrix -->
+<section class="rounded-xl bg-surface-container-low p-space-md flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">accessibility_new</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">WCAG 2.1 AA Matrix</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Screen reader &amp; visual compliance</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-tertiary-container/30 text-on-tertiary-container font-label-md text-label-md font-semibold">
+        98% Pass
+      </span>
+</div>
+<div class="flex flex-col gap-2">
+<!-- Item 1: Contrast -->
+<div class="rounded-lg bg-surface-container p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">contrast</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Color Contrast Ratio</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Min: 4.8:1 (Baseline 4.5:1)</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Pass AA
+        </span>
+</div>
+<!-- Item 2: Alt Text -->
+<div class="rounded-lg bg-surface-container p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">image</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Alt Text Coverage</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">42 of 43 media tags marked</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-on-surface font-semibold">
+          97.7%
+        </span>
+</div>
+<!-- Item 3: Screen Reader Landmarks -->
+<div class="rounded-lg bg-surface-container p-space-sm flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">account_tree</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">ARIA Semantic Landmarks</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Full hierarchical tree intact</span>
+</div>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span> Valid
+        </span>
+</div>
+</div>
+</section>
+<!-- Sticky Audit Action & Export Bar -->
+<div class="sticky bottom-3 z-40 w-full pt-2">
+<div class="p-2 rounded-2xl bg-surface-container-high/95 backdrop-blur-xl shadow-2xl flex flex-col gap-2">
+<button class="w-full py-3.5 px-space-md rounded-xl bg-primary-container hover:bg-inverse-primary text-on-primary-container font-headline-sm text-[16px] font-semibold flex items-center justify-between shadow-lg transition-transform active:scale-[0.98]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span>Export 14-Page Audit PDF</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="bg-on-primary-container/20 px-2 py-0.5 rounded text-[11px] font-mono tracking-tight text-on-primary-container font-normal">2.4 MB</span>
+<span class="material-symbols-outlined text-[18px]">download</span>
+</div>
+</button>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2.5 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-primary">send</span>
+<span>Push to Jira</span>
+</button>
+<button class="py-2.5 px-3 rounded-lg bg-surface-container text-on-surface hover:bg-surface-bright font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px] text-secondary">terminal</span>
+<span>Create GitHub Issue</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interaction for filter tabs switching
+  document.querySelectorAll('#category-tabs button').forEach(tab => {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('#category-tabs button').forEach(b => {
+        b.className = 'px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex items-center gap-1.5';
+      });
+      this.className = 'px-3.5 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm flex items-center gap-1.5 transition-all';
+    });
+  });
+</script></main></body></html>

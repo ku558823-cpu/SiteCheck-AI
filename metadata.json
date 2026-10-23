@@ -1,0 +1,6 @@
+{
+  "name": "SiteCheck AI - Autonomous Web QA & Diagnostic Suite",
+  "description": "Autonomous website auditing, visual regression detection, broken link crawler, Core Web Vitals analysis, and instant AI code patch generation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

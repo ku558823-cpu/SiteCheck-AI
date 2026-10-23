@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>SiteCheck AI - Autonomous Web Quality Assurance &amp; Diagnostic Suite</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary": "#002a78", "primary": "#b4c5ff", "on-secondary": "#3f008e", "inverse-surface": "#dfe2f1", "tertiary-fixed-dim": "#4edea3", "surface-container-low": "#171b26", "primary-container": "#2563eb", "on-secondary-fixed": "#25005a", "on-primary-fixed-variant": "#003ea8", "outline-variant": "#434655", "on-background": "#dfe2f1", "background": "#0f131d", "secondary-container": "#6001d1", "surface-bright": "#353944", "surface-container-high": "#262a35", "secondary-fixed-dim": "#d2bbff", "on-surface-variant": "#c3c6d7", "inverse-primary": "#0053db", "on-secondary-container": "#c9aeff", "on-secondary-fixed-variant": "#5a00c6", "on-primary-container": "#eeefff", "primary-fixed-dim": "#b4c5ff", "surface-variant": "#313540", "on-tertiary-fixed": "#002113", "tertiary": "#4edea3", "on-tertiary": "#003824", "surface-container-highest": "#313540", "surface-container": "#1c1f2a", "on-tertiary-container": "#bdffdb", "on-primary-fixed": "#00174b", "error-container": "#93000a", "tertiary-container": "#007d55", "secondary-fixed": "#eaddff", "on-tertiary-fixed-variant": "#005236", "on-surface": "#dfe2f1", "secondary": "#d2bbff", "tertiary-fixed": "#6ffbbe", "surface": "#0f131d", "primary-fixed": "#dbe1ff", "surface-tint": "#b4c5ff", "inverse-on-surface": "#2c303b", "on-error-container": "#ffdad6", "on-error": "#690005", "error": "#ffb4ab", "surface-dim": "#0f131d", "outline": "#8d90a0", "surface-container-lowest": "#0a0e18" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "gutter-mobile": "0.75rem", "space-sm": "0.5rem", "space-xl": "2.5rem", "margin-mobile": "1rem", "space-md": "1rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter": "1.5rem" }, "fontFamily": { "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Inter"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "body-md": ["Inter"], "headline-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "label-md": ["Inter"] }, "fontSize": { "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "fontWeight": "500" }], "headline-xl-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "headline-xl": ["48px", { "lineHeight": "56px", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }] } } } };</script></head><body class="bg-surface-container-lowest text-on-surface font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_16px_rgba(0,0,0,0.5)]"><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-3 group transition-transform active:scale-95" data-path="dashboard" href="#"><div class="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary-container via-secondary-container to-surface-container-high shadow-[0_0_20px_rgba(37,99,235,0.4)]"><span class="material-symbols-outlined text-primary text-[22px]">shield_with_heart</span><div class="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-primary to-secondary opacity-30 blur-sm group-hover:opacity-75 transition duration-500"></div></div><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-bold">SiteCheck</span><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-extrabold">AI</span></div><span class="font-label-sm text-[10px] text-outline uppercase tracking-widest font-semibold">Automated QA Suite</span></div></a><div class="hidden xl:flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-surface-container-low shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-tertiary"></span></span><span class="font-label-sm text-label-sm text-on-surface-variant font-mono tracking-tight">AI ENGINE v3.4 ACTIVE <span class="text-outline mx-1">•</span> Edge Node US-East</span></div></div><nav class="hidden lg:flex items-center gap-1 bg-surface-container-low/70 p-1 rounded-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_rgba(37,99,235,0.35)]"><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="analyzer" href="#">Analyzer</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#">Dashboard</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="testing-reports" href="#">Testing Reports</a><a class="px-3.5 py-2 rounded-lg font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ai-assistant" href="#">AI Assistant</a><a aria-current="page" class="px-3.5 py-2 transition-colors bg-primary-container text-on-primary-container font-semibold rounded-lg shadow-[0_0_16px_rgba(37,99,235,0.35)]" data-path="pricing" href="#">Pricing</a></nav><div class="flex items-center gap-space-sm"><button class="hidden md:flex items-center gap-3 px-3.5 py-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]" type="button"><span class="material-symbols-outlined text-[18px] text-outline">search</span><span class="font-body-sm text-body-sm text-outline">Search audits, URLs, tests...</span><kbd class="hidden lg:inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-surface-container-high text-[10px] font-mono text-outline font-semibold shadow-sm">⌘K</kbd></button><button class="flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md hover:bg-inverse-primary hover:text-on-primary-container shadow-[0_0_16px_rgba(37,99,235,0.35)] transition-all active:scale-95" type="button"><span class="material-symbols-outlined text-[18px]">play_arrow</span><span class="hidden sm:inline">New Audit</span></button><button aria-label="Notifications" class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-error ring-2 ring-surface-container-lowest animate-pulse"></span></button><div class="flex items-center gap-2.5 pl-2 ml-1"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-primary-container/40"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden 2xl:flex flex-col text-left"><div class="flex items-center gap-1.5"><span class="font-label-md text-label-md text-on-surface leading-none">Alex Vance</span><span class="px-1.5 py-0.5 rounded-full bg-secondary-container/60 text-secondary text-[10px] font-semibold leading-none">Pro Team</span></div><span class="font-label-sm text-[11px] text-outline leading-tight">alex@sitecheck.ai</span></div></div></div></div></header><main class="w-full pt-20 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Atmospheric Gradient Canvas -->
+<div class="relative w-full overflow-hidden px-gutter pt-8 pb-16">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-gradient-to-r from-primary-container/20 via-secondary-container/20 to-tertiary-container/10 blur-[130px] pointer-events-none rounded-full"></div>
+<div class="absolute top-20 right-10 w-96 h-96 bg-primary-container/10 blur-[120px] pointer-events-none rounded-full"></div>
+<!-- Header Section -->
+<div class="relative max-w-5xl mx-auto text-center flex flex-col items-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high text-primary shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] mb-4">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold text-primary">Transparent, Performance-Driven Pricing</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight max-w-3xl font-extrabold leading-tight">
+        Predictable Pricing for <span class="bg-gradient-to-r from-primary via-primary-fixed-dim to-secondary bg-clip-text text-transparent">Autonomous Quality</span> Engineering
+      </h1>
+<p class="mt-4 font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+        From individual developers to enterprise engineering organizations auditing millions of URLs per week. Zero hidden telemetry fees.
+      </p>
+<!-- Billing Toggle Switch -->
+<div class="mt-8 flex items-center justify-center gap-4 bg-surface-container-low/90 backdrop-blur-md p-1.5 rounded-xl shadow-xl">
+<button class="px-5 py-2 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface" id="billing-monthly-btn" onclick="setBilling('monthly')">
+          Monthly Billing
+        </button>
+<button class="relative flex items-center gap-2 px-5 py-2 rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-md" id="billing-yearly-btn" onclick="setBilling('yearly')">
+<span>Yearly Billing</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary text-on-tertiary text-[10px] font-bold tracking-tight shadow-sm">
+            Save 20% + 2 Mo Free
+          </span>
+</button>
+</div>
+<!-- Trust Badges Strip -->
+<div class="mt-6 flex flex-wrap items-center justify-center gap-6 text-outline font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified_user</span>
+<span>SOC2 Type II Certified Runners</span>
+</div>
+<span class="text-surface-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">bolt</span>
+<span>Edge Sub-30ms Crawl Engines</span>
+</div>
+<span class="text-surface-variant">•</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">sync</span>
+<span>Instant GitHub &amp; Jira Auto-PRs</span>
+</div>
+</div>
+</div>
+<!-- 3 Tier Cards Grid -->
+<div class="relative max-w-7xl mx-auto mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+<!-- TIER 1: Developer & Indie -->
+<div class="flex flex-col justify-between bg-surface-container/70 backdrop-blur-xl rounded-2xl p-8 shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-surface-container">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Developer &amp; Indie</span>
+<span class="p-2 rounded-xl bg-surface-container-high text-primary">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</span>
+</div>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant min-h-[32px]">
+            For solo software engineers, consultants, and independent web projects needing instant regression safety.
+          </p>
+<div class="mt-6 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl font-extrabold text-on-surface tier-price" data-monthly="$29" data-yearly="$24">$24</span>
+<span class="font-body-sm text-body-sm text-outline">/ month</span>
+</div>
+<p class="text-[11px] text-outline font-label-sm mt-1 billing-note">Billed annually ($288/yr)</p>
+<div class="mt-6 pt-6 bg-surface-container-lowest/40 rounded-xl p-4 flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">100 on-demand audits / mo</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">5 automated crawl schedules</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Broken link &amp; CTA click health</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Basic AI fix explanations</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Standard PDF QA reports</span>
+</div>
+<div class="flex items-center gap-3 text-outline">
+<span class="material-symbols-outlined text-[18px] text-outline">cancel</span>
+<span class="font-body-sm text-body-sm text-outline">Autonomous agent checkout fuzzing</span>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full py-3 px-4 rounded-xl bg-surface-container-high text-on-surface hover:bg-surface-bright font-label-md text-label-md transition-all active:scale-[0.98] shadow-md flex items-center justify-center gap-2">
+<span>Start Free 14-Day Trial</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+<span class="block text-center text-[11px] text-outline mt-2 font-label-sm">No credit card required • Cancel anytime</span>
+</div>
+</div>
+<!-- TIER 2: Pro Team & Scale (Highlighted Featured Tier) -->
+<div class="relative flex flex-col justify-between bg-gradient-to-b from-surface-container-high/90 via-surface-container/90 to-surface-container-low/95 backdrop-blur-2xl rounded-2xl p-8 shadow-[0_0_40px_rgba(37,99,235,0.25)] lg:-translate-y-4">
+<!-- Glowing Accent Indicator -->
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-primary-container via-secondary-container to-primary-container text-on-primary-container font-label-sm text-label-sm tracking-wider uppercase font-bold shadow-lg flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span>Most Popular for Scale</span>
+</div>
+<div>
+<div class="flex items-center justify-between mt-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Pro Team &amp; Scale</span>
+<span class="p-2 rounded-xl bg-primary-container text-on-primary-container shadow-[0_0_12px_rgba(37,99,235,0.5)]">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+</span>
+</div>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant min-h-[32px]">
+            For growing SaaS applications, high-velocity digital engineering squads, and modern web agencies.
+          </p>
+<div class="mt-6 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl font-extrabold text-primary tier-price" data-monthly="$89" data-yearly="$72">$72</span>
+<span class="font-body-sm text-body-sm text-outline">/ month</span>
+</div>
+<p class="text-[11px] text-tertiary-fixed-dim font-label-sm mt-1 billing-note font-medium">Billed annually ($864/yr) — 2 Months Free</p>
+<div class="mt-6 pt-6 bg-surface-container-lowest/60 rounded-xl p-4 flex flex-col gap-3 shadow-inner">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Unlimited on-demand audits</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">50 monitored production domains</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold text-primary">Autonomous Agent Fuzzing (Forms &amp; Cart)</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Multi-viewport mobile &amp; tablet rendering</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Instant GitHub PRs &amp; Jira bi-directional sync</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Core Web Vitals real-time regressions</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">White-label export reports with client brand</span>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full py-3.5 px-4 rounded-xl bg-primary-container text-on-primary-container hover:bg-inverse-primary font-label-md text-label-md transition-all active:scale-[0.98] shadow-[0_0_24px_rgba(37,99,235,0.4)] flex items-center justify-center gap-2 font-bold">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Get Started with Pro</span>
+</button>
+<span class="block text-center text-[11px] text-on-surface-variant mt-2 font-label-sm">Immediate setup • 14 days full feature access</span>
+</div>
+</div>
+<!-- TIER 3: Enterprise AI Guard -->
+<div class="flex flex-col justify-between bg-surface-container/70 backdrop-blur-xl rounded-2xl p-8 shadow-xl transition-all duration-300 hover:shadow-2xl hover:bg-surface-container">
+<div>
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">Enterprise AI Guard</span>
+<span class="p-2 rounded-xl bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined text-[20px]">corporate_fare</span>
+</span>
+</div>
+<p class="mt-2 font-body-sm text-body-sm text-on-surface-variant min-h-[32px]">
+            For mission-critical web platforms, banking, and global e-commerce requiring isolation &amp; bespoke pipelines.
+          </p>
+<div class="mt-6 flex items-baseline gap-2">
+<span class="font-headline-xl text-headline-xl font-extrabold text-on-surface tier-price" data-monthly="$399" data-yearly="$319">$319</span>
+<span class="font-body-sm text-body-sm text-outline">/ mo or Custom</span>
+</div>
+<p class="text-[11px] text-outline font-label-sm mt-1 billing-note">Custom procurement &amp; invoicing available</p>
+<div class="mt-6 pt-6 bg-surface-container-lowest/40 rounded-xl p-4 flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold">Unlimited monitored domains</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Private isolated Chromium runner nodes</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">SAML / SSO (Okta, Azure AD, Ping)</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Custom Playwright &amp; Cypress synthetic injection</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Dedicated residential IP pool</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface font-semibold text-secondary">99.99% Uptime SLA Guarantee</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span class="font-body-sm text-body-sm text-on-surface">Dedicated Solutions Architect &amp; Slack channel</span>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full py-3 px-4 rounded-xl bg-surface-container-high text-on-surface hover:bg-secondary-container hover:text-on-secondary-container font-label-md text-label-md transition-all active:scale-[0.98] shadow-md flex items-center justify-center gap-2">
+<span>Contact Enterprise Sales</span>
+<span class="material-symbols-outlined text-[16px]">headset_mic</span>
+</button>
+<span class="block text-center text-[11px] text-outline mt-2 font-label-sm">Custom DPA &amp; security review support</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive ROI & Dev Time Saved Section -->
+<div class="w-full px-gutter py-12 bg-surface-container-low/50">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<!-- Calculator Left Column -->
+<div class="lg:col-span-7 flex flex-col bg-surface-container/90 rounded-2xl p-8 shadow-xl">
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-wider mb-2">
+<span class="material-symbols-outlined text-[20px]">calculate</span>
+<span>Return On Investment Simulator</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">
+          How much engineering time does SiteCheck AI reclaim?
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Drag to match your team’s scale and discover the hours diverted from repetitive manual browser testing back into product shipping.
+        </p>
+<!-- Slider input container -->
+<div class="mt-8 flex flex-col gap-3">
+<div class="flex justify-between items-center font-label-md text-label-md">
+<span class="text-on-surface font-medium">Production URLs / Pages Monitored:</span>
+<span class="text-primary font-bold font-mono text-[16px]" id="slider-page-val">250 Pages</span>
+</div>
+<input class="w-full h-2 bg-surface-container-high rounded-lg appearance-none cursor-pointer accent-primary-container" id="roi-slider" max="2500" min="20" oninput="updateRoi(this.value)" step="10" type="range" value="250"/>
+<div class="flex justify-between text-[11px] text-outline font-label-sm">
+<span>20 URLs</span>
+<span>500 URLs</span>
+<span>1,000 URLs</span>
+<span>2,500+ URLs</span>
+</div>
+</div>
+<!-- Computed Metric Results -->
+<div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
+<div class="p-4 rounded-xl bg-surface-container-lowest/70 flex flex-col shadow-inner">
+<span class="font-label-sm text-label-sm text-outline uppercase">Manual QA Saved</span>
+<span class="font-headline-md text-headline-md text-tertiary font-extrabold mt-1" id="hours-saved">18.5 hrs</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">every single week</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest/70 flex flex-col shadow-inner">
+<span class="font-label-sm text-label-sm text-outline uppercase">Dev Team Value</span>
+<span class="font-headline-md text-headline-md text-primary font-extrabold mt-1" id="dollar-value">$6,290</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">monthly dev cost parity</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-lowest/70 flex flex-col shadow-inner">
+<span class="font-label-sm text-label-sm text-outline uppercase">Defect Escape Rate</span>
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold mt-1">-88%</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant mt-0.5">caught pre-deployment</span>
+</div>
+</div>
+</div>
+<!-- Social Proof & Customer Voices Right Column -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<!-- Testimonial 1 -->
+<div class="p-6 rounded-2xl bg-surface-container/70 shadow-lg flex flex-col justify-between">
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+            "SiteCheck AI caught a broken checkout state on Mobile Safari during our black Friday rush before a single customer reported it. The automated GitHub PR had the exact CSS patch ready."
+          </p>
+<div class="mt-4 flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait photo of a female software engineering director with modern tech glasses and confident smile in an office setting with ambient slate-blue background lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVewVysQro499VHw4RElE7Xy-tI0gfVoDkOU222j5ufrv4xj4ius-nt7kgSwwjuPR7DDN89pWfkC-nSKKvga9RTjsAtpo90c4366vhCmHxE_xNqZPtnoI6pj64mWFfgYrGRx6FWUOwP3ZilTgpmwDdvvIawsAs0c5ipephzkT19x4CoE3nIJjxQqPxDCcnbUSd9lmSSIVnIX5BV_JAhpvJuve0ZBxcfBumo2DVqSnraNqBBZe-iUyO"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Elena Rostova</span>
+<span class="font-label-sm text-[11px] text-outline">VP of Engineering at FinEdge Global</span>
+</div>
+<div class="ml-auto text-primary font-mono text-[12px] font-bold">FINTECH</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="p-6 rounded-2xl bg-surface-container/70 shadow-lg flex flex-col justify-between">
+<p class="font-body-md text-body-md text-on-surface-variant italic">
+            "Our agency manages 70+ Shopify Plus storefronts. Moving from manual staging audits to SiteCheck AI Pro cut our release cycle verification down from 4 hours to 90 seconds."
+          </p>
+<div class="mt-4 flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait photo of a young male creative director with dark jacket in a modern architectural agency studio with subdued neon accent lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMXfaV2r5KBgat3u4L6IqfYtxerDo8Iw3GNBRK5MBLB9MB7tqp6wO7_WVUFwH12eKleny2Zej5FonBTZBE0R8Ewk3FxhUNvLPdd2rwzoJR4H-dWBb-lWHSG2FnHaCIlPLtXfm4NkvBmXbaYe2MSFNWY8AFXL2kOe8p1PwQf1cnBpK8iZMS4eE1WIPfU3mAJYF8YmYoTwt_KIRN2hck0wJv7Ij8ZcRn-kuBrtQCWFk_8hmkQaMkvzfC"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Marcus Tremblay</span>
+<span class="font-label-sm text-[11px] text-outline">Head of Quality at Hyperion Agency</span>
+</div>
+<div class="ml-auto text-secondary font-mono text-[12px] font-bold">DEVTOOLS</div>
+</div>
+</div>
+<!-- Metric Inline Strip -->
+<div class="p-4 rounded-xl bg-surface-container-high/60 flex items-center justify-around text-center">
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface font-extrabold">4.2M+</span>
+<span class="block text-[11px] text-outline font-label-sm">URLs audited daily</span>
+</div>
+<div class="w-px h-8 bg-surface-variant"></div>
+<div>
+<span class="font-headline-sm text-headline-sm text-tertiary font-extrabold">99.98%</span>
+<span class="block text-[11px] text-outline font-label-sm">Precision rating</span>
+</div>
+<div class="w-px h-8 bg-surface-variant"></div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary font-extrabold">12 min</span>
+<span class="block text-[11px] text-outline font-label-sm">Avg fix deploy time</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Comprehensive Feature Comparison Matrix -->
+<div class="w-full px-gutter py-16">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">
+          Comprehensive Feature Breakdown
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Compare full platform specifications across every test layer, security clearance, and reporting pipeline.
+        </p>
+</div>
+<!-- Matrix Table Container -->
+<div class="w-full bg-surface-container/70 rounded-2xl shadow-2xl overflow-x-auto">
+<table class="w-full text-left min-w-[768px]">
+<!-- Table Sticky Header -->
+<thead>
+<tr class="bg-surface-container-high/90 backdrop-blur-sm text-on-surface">
+<th class="p-5 font-headline-sm text-[15px] font-semibold w-2/5">Capabilities &amp; Infrastructure</th>
+<th class="p-5 font-headline-sm text-[15px] font-semibold w-1/5 text-center">Developer &amp; Indie</th>
+<th class="p-5 font-headline-sm text-[15px] font-bold w-1/5 text-center text-primary bg-primary-container/10">Pro Team &amp; Scale</th>
+<th class="p-5 font-headline-sm text-[15px] font-semibold w-1/5 text-center">Enterprise AI Guard</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-surface-variant">
+<!-- CATEGORY 1: Crawl & Testing Capacity -->
+<tr class="bg-surface-container-low font-label-md text-label-md text-primary uppercase tracking-wider">
+<td class="px-5 py-3 font-semibold" colspan="4">1. Crawl &amp; Testing Capacity</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Monthly On-Demand Audits</td>
+<td class="px-5 py-3.5 text-center">100 / mo</td>
+<td class="px-5 py-3.5 text-center font-bold text-primary bg-primary-container/5">Unlimited</td>
+<td class="px-5 py-3.5 text-center font-bold text-on-surface">Custom Volume (Millions)</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Scheduled Production Domains</td>
+<td class="px-5 py-3.5 text-center">5 domains</td>
+<td class="px-5 py-3.5 text-center font-bold text-on-surface bg-primary-container/5">50 domains</td>
+<td class="px-5 py-3.5 text-center font-bold text-secondary">Unlimited domains</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Concurrent Chromium Headless Runners</td>
+<td class="px-5 py-3.5 text-center">2 runners</td>
+<td class="px-5 py-3.5 text-center font-semibold text-on-surface bg-primary-container/5">16 runners</td>
+<td class="px-5 py-3.5 text-center font-semibold text-secondary">Dedicated cluster (64+)</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Edge Geographic Probe Regions</td>
+<td class="px-5 py-3.5 text-center">US-East (1 node)</td>
+<td class="px-5 py-3.5 text-center text-on-surface bg-primary-container/5">12 Global Edge Nodes</td>
+<td class="px-5 py-3.5 text-center text-on-surface">36 Global Nodes + Custom IP</td>
+</tr>
+<!-- CATEGORY 2: AI Agent Capabilities -->
+<tr class="bg-surface-container-low font-label-md text-label-md text-primary uppercase tracking-wider">
+<td class="px-5 py-3 font-semibold" colspan="4">2. AI Agent Capabilities &amp; Autonomy</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Autonomous Checkout &amp; Form Fuzzing</td>
+<td class="px-5 py-3.5 text-center text-outline">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</td>
+<td class="px-5 py-3.5 text-center bg-primary-container/5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</td>
+<td class="px-5 py-3.5 text-center">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Contextual Root-Cause Code Explanation</td>
+<td class="px-5 py-3.5 text-center">Basic overview</td>
+<td class="px-5 py-3.5 text-center font-semibold text-on-surface bg-primary-container/5">Deep AST &amp; DOM stacktrace</td>
+<td class="px-5 py-3.5 text-center font-semibold text-secondary">Custom trained LLM weights</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Automated GitHub Pull Request Generator</td>
+<td class="px-5 py-3.5 text-center text-outline">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</td>
+<td class="px-5 py-3.5 text-center bg-primary-container/5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</td>
+<td class="px-5 py-3.5 text-center">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</td>
+</tr>
+<!-- CATEGORY 3: Bug Detection & Diagnostics -->
+<tr class="bg-surface-container-low font-label-md text-label-md text-primary uppercase tracking-wider">
+<td class="px-5 py-3 font-semibold" colspan="4">3. Bug Detection &amp; Diagnostics</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Visual Regression Diff (Pixel &amp; Structural)</td>
+<td class="px-5 py-3.5 text-center">Standard Diff</td>
+<td class="px-5 py-3.5 text-center font-semibold text-on-surface bg-primary-container/5">Sub-pixel + Semantic Shifts</td>
+<td class="px-5 py-3.5 text-center font-semibold text-on-surface">Sub-pixel + Semantic Shifts</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Core Web Vitals Metric Diagnostics</td>
+<td class="px-5 py-3.5 text-center">LCP &amp; CLS only</td>
+<td class="px-5 py-3.5 text-center font-semibold text-on-surface bg-primary-container/5">Full INP, TTFB, LCP, CLS</td>
+<td class="px-5 py-3.5 text-center font-semibold text-on-surface">Full Real-User Telemetry + Edge</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">WCAG 2.2 AA &amp; AAA Accessibility Radar</td>
+<td class="px-5 py-3.5 text-center">Basic tags</td>
+<td class="px-5 py-3.5 text-center bg-primary-container/5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</td>
+<td class="px-5 py-3.5 text-center">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</td>
+</tr>
+<!-- CATEGORY 4: Integrations & Reporting -->
+<tr class="bg-surface-container-low font-label-md text-label-md text-primary uppercase tracking-wider">
+<td class="px-5 py-3 font-semibold" colspan="4">4. Integrations &amp; Workflows</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">CI/CD Gatekeeper (GitHub Actions, GitLab, CircleCI)</td>
+<td class="px-5 py-3.5 text-center text-outline">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</td>
+<td class="px-5 py-3.5 text-center bg-primary-container/5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</td>
+<td class="px-5 py-3.5 text-center">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Issue Trackers (Jira, Linear, Asana)</td>
+<td class="px-5 py-3.5 text-center text-outline">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</td>
+<td class="px-5 py-3.5 text-center font-semibold text-on-surface bg-primary-container/5">Linear &amp; Jira 2-way</td>
+<td class="px-5 py-3.5 text-center font-semibold text-on-surface">Custom Webhooks + Enterprise Jira</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Export Formats</td>
+<td class="px-5 py-3.5 text-center">Standard PDF</td>
+<td class="px-5 py-3.5 text-center font-semibold text-on-surface bg-primary-container/5">White-Label PDF &amp; JSON API</td>
+<td class="px-5 py-3.5 text-center font-semibold text-on-surface">Snowflake, S3, BigQuery Streaming</td>
+</tr>
+<!-- CATEGORY 5: Security & Compliance -->
+<tr class="bg-surface-container-low font-label-md text-label-md text-primary uppercase tracking-wider">
+<td class="px-5 py-3 font-semibold" colspan="4">5. Security, Compliance &amp; SLAs</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Single Sign-On (SAML / Okta / Azure AD)</td>
+<td class="px-5 py-3.5 text-center text-outline">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</td>
+<td class="px-5 py-3.5 text-center text-outline bg-primary-container/5">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</td>
+<td class="px-5 py-3.5 text-center">
+<span class="material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">SOC2 Type II Report &amp; Custom DPA</td>
+<td class="px-5 py-3.5 text-center text-outline">Standard Terms</td>
+<td class="px-5 py-3.5 text-center bg-primary-container/5">SOC2 Type II Report</td>
+<td class="px-5 py-3.5 text-center font-semibold text-secondary">SOC2 + Custom BAA / DPA</td>
+</tr>
+<tr class="hover:bg-surface-container-high/40 transition-colors">
+<td class="px-5 py-3.5 text-on-surface font-medium">Uptime Service Level Agreement</td>
+<td class="px-5 py-3.5 text-center">99.5%</td>
+<td class="px-5 py-3.5 text-center font-semibold text-on-surface bg-primary-container/5">99.9%</td>
+<td class="px-5 py-3.5 text-center font-bold text-tertiary">99.99% Financially Backed</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Frequently Asked Questions Accordion -->
+<div class="w-full px-gutter py-16 bg-surface-container-low/40">
+<div class="max-w-4xl mx-auto flex flex-col items-center">
+<div class="text-center mb-10">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-widest">Everything You Need To Know</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight mt-1">
+          Frequently Answered Questions
+        </h2>
+</div>
+<!-- Accordion Stack -->
+<div class="w-full flex flex-col gap-3">
+<!-- FAQ 1 -->
+<div class="bg-surface-container/80 rounded-xl overflow-hidden shadow-md">
+<button class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-surface-container-high/50 transition-colors" onclick="toggleFaq(1)">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">How does the automated GitHub Pull Request generator work?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="faq-icon-1">expand_more</span>
+</button>
+<div class="hidden px-6 pb-5 pt-1 text-on-surface-variant font-body-md text-body-md" id="faq-content-1">
+            When our autonomous test runners detect a regression (such as a broken responsive layout break, missing accessibility ARIA tags, or broken routing state), SiteCheck AI’s static analysis engine generates an isolated branch. It applies the surgical CSS or JSX correction, runs validation against our staging runners, and opens a clean GitHub Pull Request containing before/after diffs and visual regression proof.
+          </div>
+</div>
+<!-- FAQ 2 -->
+<div class="bg-surface-container/80 rounded-xl overflow-hidden shadow-md">
+<button class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-surface-container-high/50 transition-colors" onclick="toggleFaq(2)">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">Can SiteCheck AI audit staging environments behind firewalls or VPNs?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="faq-icon-2">expand_more</span>
+</button>
+<div class="hidden px-6 pb-5 pt-1 text-on-surface-variant font-body-md text-body-md" id="faq-content-2">
+            Yes. Pro and Enterprise plans support authenticated crawling via Basic Auth, custom HTTP headers, Cookie injection, and our lightweight Docker-based runner proxy that can run directly inside your private VPC or Kubernetes cluster.
+          </div>
+</div>
+<!-- FAQ 3 -->
+<div class="bg-surface-container/80 rounded-xl overflow-hidden shadow-md">
+<button class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-surface-container-high/50 transition-colors" onclick="toggleFaq(3)">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">What happens if we exceed our monthly audit limits?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="faq-icon-3">expand_more</span>
+</button>
+<div class="hidden px-6 pb-5 pt-1 text-on-surface-variant font-body-md text-body-md" id="faq-content-3">
+            We never abruptly halt scheduled monitoring for your live apps. On the Developer plan, once you reach 100 audits, you can either upgrade instantly to Pro with one click or purchase an on-demand burst pack ($10 for 50 audits). Pro Team and Enterprise plans enjoy fully unlimited audits with no overage penalties.
+          </div>
+</div>
+<!-- FAQ 4 -->
+<div class="bg-surface-container/80 rounded-xl overflow-hidden shadow-md">
+<button class="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-surface-container-high/50 transition-colors" onclick="toggleFaq(4)">
+<span class="font-headline-sm text-[16px] text-on-surface font-semibold">Do you support custom Playwright or Cypress synthetic test suites?</span>
+<span class="material-symbols-outlined text-outline transition-transform duration-200" id="faq-icon-4">expand_more</span>
+</button>
+<div class="hidden px-6 pb-5 pt-1 text-on-surface-variant font-body-md text-body-md" id="faq-content-4">
+            Yes. On the Enterprise tier, engineering teams can upload existing Playwright `.spec.ts` files or Cypress test bundles. SiteCheck AI executes them in sandboxed micro-containers across 30+ edge geolocations with full telemetry recording, video capture, and HAR logs.
+          </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Final Conversion Banner -->
+<div class="relative w-full px-gutter py-20 overflow-hidden">
+<div class="max-w-5xl mx-auto rounded-3xl bg-gradient-to-r from-primary-container via-surface-container-high to-secondary-container p-1 shadow-2xl">
+<div class="w-full bg-surface-container-lowest/90 backdrop-blur-xl rounded-[22px] px-8 py-14 text-center flex flex-col items-center">
+<span class="px-3 py-1 rounded-full bg-primary/10 text-primary font-mono text-[11px] font-bold uppercase tracking-wider mb-4">
+          Autonomous QA Infrastructure
+        </span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface font-extrabold max-w-2xl leading-tight">
+          Ready to eliminate manual regression passes forever?
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mt-4">
+          Start your 14-day free trial on the Pro Team plan. No credit card required. Connect your repo in under 2 minutes.
+        </p>
+<div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
+<button class="px-8 py-4 rounded-xl bg-primary-container text-on-primary-container font-label-md text-label-md font-bold shadow-[0_0_24px_rgba(37,99,235,0.4)] hover:bg-inverse-primary transition-all active:scale-95 flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Deploy First Autonomous Audit Now</span>
+</button>
+<button class="px-6 py-4 rounded-xl bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-bright transition-all">
+            Schedule Technical Architecture Demo
+          </button>
+</div>
+<div class="mt-8 flex items-center gap-6 text-outline font-label-sm text-label-sm">
+<span>✓ 14-Day Free Trial</span>
+<span>✓ Instant CI/CD Setup</span>
+<span>✓ Zero Vendor Lock-in</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Billing Toggle Logic
+  let currentBilling = 'yearly';
+
+  function setBilling(mode) {
+    currentBilling = mode;
+    const monthlyBtn = document.getElementById('billing-monthly-btn');
+    const yearlyBtn = document.getElementById('billing-yearly-btn');
+    const prices = document.querySelectorAll('.tier-price');
+    const notes = document.querySelectorAll('.billing-note');
+
+    if (mode === 'yearly') {
+      monthlyBtn.className = "px-5 py-2 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface";
+      yearlyBtn.className = "relative flex items-center gap-2 px-5 py-2 rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-md";
+      
+      prices.forEach(el => {
+        el.textContent = el.getAttribute('data-yearly');
+      });
+      if(notes[0]) notes[0].textContent = "Billed annually ($288/yr)";
+      if(notes[1]) notes[1].textContent = "Billed annually ($864/yr) — 2 Months Free";
+      if(notes[2]) notes[2].textContent = "Custom procurement & invoicing available";
+    } else {
+      yearlyBtn.className = "relative flex items-center gap-2 px-5 py-2 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface";
+      monthlyBtn.className = "px-5 py-2 rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary-container shadow-md";
+      
+      prices.forEach(el => {
+        el.textContent = el.getAttribute('data-monthly');
+      });
+      if(notes[0]) notes[0].textContent = "Billed month-to-month";
+      if(notes[1]) notes[1].textContent = "Billed month-to-month, cancel anytime";
+      if(notes[2]) notes[2].textContent = "Billed month-to-month or invoice";
+    }
+  }
+
+  // Interactive ROI Calculator Logic
+  function updateRoi(pages) {
+    const pageValEl = document.getElementById('slider-page-val');
+    const hoursSavedEl = document.getElementById('hours-saved');
+    const dollarValEl = document.getElementById('dollar-value');
+
+    pageValEl.textContent = pages >= 2500 ? '2,500+ Pages' : pages + ' Pages';
+    
+    // Formula calculations
+    const hours = (pages * 0.075).toFixed(1);
+    const savings = Math.round(hours * 85 * 4); // Based on $85/hr developer loaded cost * 4 weeks
+
+    hoursSavedEl.textContent = hours + ' hrs';
+    dollarValEl.textContent = '$' + savings.toLocaleString();
+  }
+
+  // FAQ Accordion Expand/Collapse
+  function toggleFaq(id) {
+    const content = document.getElementById('faq-content-' + id);
+    const icon = document.getElementById('faq-icon-' + id);
+
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    } else {
+      content.classList.add('hidden');
+      icon.style.transform = 'rotate(0deg)';
+    }
+  }
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_16px_rgba(0,0,0,0.4)] mt-space-xl"><div class="w-full px-gutter py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex items-center gap-3"><div class="flex items-center justify-center w-8 h-8 rounded-lg bg-surface-container-low text-primary"><span class="material-symbols-outlined text-[18px]">shield</span></div><div class="flex flex-col"><span class="font-headline-sm text-[14px] text-on-surface font-semibold">SiteCheck AI Platform</span><span class="font-body-sm text-body-sm text-outline">Autonomous visual regression, edge diagnostic runner &amp; accessibility auditor.</span></div></div><div class="flex items-center gap-space-lg text-outline font-label-md text-label-md"><a class="hover:text-on-surface transition-colors" href="#">Architecture</a><a class="hover:text-on-surface transition-colors" href="#">Security &amp; SOC2</a><a class="hover:text-on-surface transition-colors" href="#">API Docs</a><a class="hover:text-on-surface transition-colors" href="#">Status</a></div><div class="font-body-sm text-body-sm text-outline">© 2025 SiteCheck AI Labs Inc. All rights reserved.</div></div></footer></body></html>
